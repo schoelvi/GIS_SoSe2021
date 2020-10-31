@@ -1,0 +1,14 @@
+h1{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+h3{
+    font-size: medium;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
