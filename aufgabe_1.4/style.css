@@ -1,3 +1,19 @@
+@media screen and (max-width: 600px){
+    body{
+       width: auto;
+       margin:0; 
+    }
+
+    h1{
+        font-size: 10px;
+    }
+    c.circle{
+        width:400px;
+        height: 400px;
+        margin: -300px auto auto auto;
+    }
+}
+
 html{
     background-image: url("dateien/hintergrundbild.png");
     font-family: Verdana, Geneva, Tahoma, sans-serif;
