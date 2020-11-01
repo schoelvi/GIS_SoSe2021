@@ -94,9 +94,9 @@ a:hover{
     color:#b63514;
 }
 
-/*a:focus{
+a:focus{
     color:#b63514;
-}*/
+}
 
 textarea {
     background-color: grey;
@@ -146,12 +146,12 @@ h1 + p{
     margin-left: 200px;
 }
 
-/*form::after{
+form::after{
     content:"";
     margin-bottom:10px;
     height: 30px;
     background-color:black;
-}*/
+}
 
 @media screen and (max-width: 600px){
     body{
