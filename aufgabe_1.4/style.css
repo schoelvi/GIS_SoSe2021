@@ -205,7 +205,7 @@ form::after{
     p{
         font-size: 24pt;
     }
-    .topnav #myLinks{
+    .header-bar{
         display:none;
     }
 
@@ -243,8 +243,8 @@ form::after{
         margin-left: auto;
     }
 
-    .header-bar-inner{
+    /*.header-bar-inner{
         font-size: 24;
         width: 100%;
-    }
+    }*/
 }
