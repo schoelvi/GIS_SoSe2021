@@ -242,14 +242,14 @@ form::after{
     }
 
     h1 + p{
-        font-size: 16;
+        font-size: 12;
         color: white;
         text-align: right;
         margin-right: auto;
         margin-left: auto;
     }
 
-    .header.bar{
+    /*.header.bar{
         visibility: hidden;
-    }
+    }*/
 }
