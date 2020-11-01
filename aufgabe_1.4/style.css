@@ -241,8 +241,7 @@ form::after{
         margin-left: auto;
     }
 
-    .header-bar-inner{
-        font-size: 24;
-        width: 100%;
+    .header.bar{
+        display: none;
     }
 }
