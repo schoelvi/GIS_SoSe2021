@@ -164,6 +164,12 @@ form::after{
         margin-right: auto;
      }
 
+     c.circle{
+        width:400px;
+        height: 400px;
+        margin: -600px auto auto auto;
+    }
+
     h1{
         font-size: 40px;
     }
@@ -175,6 +181,14 @@ form::after{
     .header-bar-inner{
         font-size: 24;
         width: 100%;
+    }
+
+    h1 + p{
+        color: white;
+        text-align: right;
+        margin-right: 80px;
+        margin-left: 200px;
+        font-size: 22;
     }
 }
 
@@ -188,9 +202,9 @@ form::after{
         font-size: 30px;
     }
     c.circle{
-        width:400px;
-        height: 400px;
-        margin: -300px auto auto auto;
+        width:200px;
+        height: 200px;
+        margin: -600px auto auto auto;
     }
 
     p{
@@ -224,5 +238,13 @@ form::after{
     .active{
         background-color: black ;
         color:  #b63514;
+    }
+
+    h1 + p{
+        font-size: 16;
+        color: white;
+        text-align: right;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
