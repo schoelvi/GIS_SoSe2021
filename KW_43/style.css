@@ -1,23 +1,70 @@
-.header-bar{
-    background-color: black;
+html{
+    background-image: url("dateien/hintergrundbild.png");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 800px;
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+
+.circle{
+    width: 400px;
+    height: 400px;
+    background-color:#b63514;
+    border-radius: 50%;
+}
+
+#aktuell{
+    color: #b63514;
 }
 
 .header-bar-inner{
+    text-align: right;
+    background-color: black;
+    padding: 5px; 
+}
+.header-links{
     color: white;
-    text-align: left;
+    margin-right: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.kontaktformular{
+    width: 200px;
+    background-color: gray; 
 }
 
 h1{
-    font-size: large;
+    font-size: 40pt;
     font-weight: bold;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: white;
 }
 
 h3{
-    font-size: medium;
+    font-size: 16pt;
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
+    color: #b63514;
 }
+
+small{
+    color: grey;
+}
+
+label{
+    color: white;
+    background-color: grey;
+    padding: 5px; 
+    margin-top: 10px;
+}
+imput{
+    background-color: grey;
+}
+
+
