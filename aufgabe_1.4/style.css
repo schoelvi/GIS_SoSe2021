@@ -156,6 +156,10 @@ form::after{
     flex-direction: column;
 }
 
+.topnav{
+    visibility: hidden;
+}
+
 @media screen and (min-width: 600px) and (max-width: 1024px){
   
     body{
@@ -184,6 +188,10 @@ form::after{
         margin-right: 80px;
         margin-left: 200px;
         font-size: 22;
+    }
+
+    .topnav{
+        visibility: hidden;
     }
 }
 
@@ -242,6 +250,6 @@ form::after{
     }
 
     .header.bar{
-        display: none;
+        visibility: hidden;
     }
 }
