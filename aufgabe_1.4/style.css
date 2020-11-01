@@ -178,11 +178,6 @@ form::after{
         font-size: 18pt;
     }
 
-    .header-bar-inner{
-        font-size: 24;
-        width: 100%;
-    }
-
     h1 + p{
         color: white;
         text-align: right;
@@ -246,5 +241,10 @@ form::after{
         text-align: right;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .header-bar-inner{
+        font-size: 24;
+        width: 100%;
     }
 }
