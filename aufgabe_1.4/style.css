@@ -205,9 +205,6 @@ form::after{
     p{
         font-size: 24pt;
     }
-    .header-bar{
-        display:none;
-    }
 
     .topnav a{
         color: white;
@@ -243,8 +240,8 @@ form::after{
         margin-left: auto;
     }
 
-    /*.header-bar-inner{
+    .header-bar-inner{
         font-size: 24;
         width: 100%;
-    }*/
+    }
 }
