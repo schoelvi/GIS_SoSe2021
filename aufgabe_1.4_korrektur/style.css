@@ -1,0 +1,255 @@
+html{
+    background-image: url("dateien/hintergrundbild.png");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle{
+    width: 800px;
+    height: 800px;
+    background-color:#b63514;
+    border-radius: 50%;
+    margin:-600px auto auto auto;
+    text-align: center;
+
+ }
+
+#aktuell{
+    color: #b63514;
+}
+
+#nachricht{
+    background-color: grey;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.header-bar-inner{
+    text-align: right;
+    background-color: black;
+    padding: 5px; 
+    width:320px;
+    position: fixed;
+    top:0px;
+    right:60px;
+}
+.header-links{
+    color: white;
+    margin-right: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/*.seiteninhalt{
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+    margin-left: 200px;
+}*/
+
+h1{
+    transition: color 8s ease-in-out 0s;
+    transition: top 2s ease-in-out 0s;
+    font-size: 50pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: lowercase;
+    color: white;
+    position: relative;
+    top:0;
+}
+
+h1:hover{
+    color:#323233;
+    top:10px;
+}
+
+h3{
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    color: #b63514;
+    margin-top: 40px;
+}
+
+p{
+ font-size: 16pt;
+}
+
+small{
+    color: grey;
+}
+
+a{
+    color:darkgrey;
+
+}
+ 
+a:hover{
+    color:#b63514;
+}
+
+a:focus{
+    color:#b63514;
+}
+
+textarea {
+    background-color: grey;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    appearance: textfield;
+    margin: 0em;
+    width: 400px;
+}
+form::placeholder {
+    color:white;
+}
+
+form input{
+    background-color: grey;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    appearance: textfield;
+    margin: 0em;
+    width: 400px;
+}
+
+a[href="dateien/datenschutz.pdf"] {
+    color: #323233;
+}
+
+h1 + p{
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+    margin-left: 200px;
+}
+
+form::after{
+    content:"";
+    margin-bottom:10px;
+    height: 30px;
+    background-color:black;
+}
+.container{
+    flex-direction: column;
+}
+
+.topnav{
+    visibility: hidden;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+  
+    body{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+     }
+
+     c.circle{
+        width:400px;
+        height: 400px;
+        margin: -600px auto auto auto;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    p{
+        font-size: 18pt;
+    }
+
+    h1 + p{
+        color: white;
+        text-align: right;
+        margin-right: 80px;
+        margin-left: 200px;
+        font-size: 22;
+    }
+
+    .topnav{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+       width: 600px;
+       margin:0; 
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    c.circle{
+        width:200px;
+        height: 200px;
+        margin: -600px auto auto auto;
+    }
+
+    p{
+        font-size: 24pt;
+    }
+
+    .topnav a{
+        color: white;
+        font-size: 24px;
+        display: block;
+        text-decoration: none;
+        padding: 20px 20px;
+        background-color: black;
+    }
+
+    .topnav a.icon{
+        background-color: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover{
+        background-color: #b63514;
+        color: black;
+    }
+
+    .active{
+        background-color: black ;
+        color:  #b63514;
+    }
+
+    h1 + p{
+        font-size: 12;
+        color: white;
+        text-align: right;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*.header.bar{
+        visibility: hidden;
+    }*/
+}
