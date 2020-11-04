@@ -182,7 +182,7 @@ form::after{
 @media screen and (min-width: 600px) and (max-width: 1024px){
   
     body{
-        width: 500px;
+        max-width: 500px;
         margin-left: auto;
         margin-right: auto;
      }
@@ -216,7 +216,7 @@ form::after{
 
 @media screen and (max-width: 600px){
     body{
-       width: 600px;
+       max-width: 600px;
        margin:0; 
     }
 
@@ -224,7 +224,7 @@ form::after{
         font-size: 30px;
         margin-top: 0;
     }
-    
+
     .circle{
         width: 500px;
         height: 500px;
