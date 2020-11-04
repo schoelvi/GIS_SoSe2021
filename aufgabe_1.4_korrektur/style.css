@@ -182,7 +182,6 @@ form::after{
 @media screen and (min-width: 600px) and (max-width: 1024px){
   
     body{
-        max-width: 500px;
         margin-left: auto;
         margin-right: auto;
      }
@@ -217,15 +216,15 @@ form::after{
         width: 500px;
     }
 
-    img{
+    .container{
         width: 500px;
     }
 }
 
 @media screen and (max-width: 600px){
     body{
-       max-width: 600px;
-       margin:0; 
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1{
@@ -276,10 +275,6 @@ form::after{
         text-align: right;
         margin-right: auto;
         margin-left: auto;
-    }
-
-    img{
-        width: auto;
     }
 
     video{
