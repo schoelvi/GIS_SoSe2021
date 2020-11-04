@@ -63,6 +63,10 @@ h1{
     top:0;
 }
 
+img{
+    margin-bottom: 15px;
+}
+
 h1:hover{
     color:#323233;
     top:10px;
@@ -147,14 +151,6 @@ table{
     width: auto;
 }
 
-/* iframe{
-    width: 800px;
-    height: 450px;
-    border: 0;
-    allowfullscreen: true;
-    aria-hidden: false;
-    tabindex: 0;
-}*/
 .jahreszahlen{
     width: 250px;
 }
