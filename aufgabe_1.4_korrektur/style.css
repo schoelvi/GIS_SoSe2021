@@ -139,6 +139,10 @@ a[href="dateien/datenschutz.pdf"] {
     color: #323233;
 }
 
+video{
+    width: 800px;
+}
+
 h1 + p{
     color: white;
     text-align: right;
