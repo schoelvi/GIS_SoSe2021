@@ -182,9 +182,9 @@ form::after{
 @media screen and (min-width: 600px) and (max-width: 1024px){
   
     body{
-        width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 500px;
+        margin-left: 50%;
+        margin-right: 50%;
      }
 
      .circle{
