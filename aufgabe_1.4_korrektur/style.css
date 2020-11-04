@@ -147,8 +147,19 @@ table{
     width: auto;
 }
 
+iframe{
+    width: 800px;
+    height: 450px;
+    border: 0;
+  /*  allowfullscreen: true;
+    aria-hidden: false;
+    tabindex: 0;*/
+}
 .jahreszahlen{
     width: 250px;
+}
+.kontakttabelle{
+    width: 50%;
 }
 
 h1 + p{
