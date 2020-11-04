@@ -143,6 +143,10 @@ video{
     width: 800px;
 }
 
+table{
+    width: auto;
+}
+
 .jahreszahlen{
     width: 250px;
 }
