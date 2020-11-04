@@ -15,7 +15,7 @@ html{
  }
 
 .inhalt{
-    max-width: 88em;
+    max-width: 800px;
 }
 
 #aktuell{
@@ -181,7 +181,9 @@ form::after{
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
   
-
+    .inhalt{
+        max-width: auto;
+    }
 
      .circle{
         width:800px;
@@ -230,6 +232,10 @@ form::after{
         width: 500px;
         height: 500px;
         margin: -1000px auto auto auto;
+    }
+
+    .inhalt{
+        max-width: auto;
     }
 
     p{
