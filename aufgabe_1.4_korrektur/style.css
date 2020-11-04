@@ -14,6 +14,10 @@ html{
 
  }
 
+.inhalt{
+    max-width: 88em;
+}
+
 #aktuell{
     color: #b63514;
 }
