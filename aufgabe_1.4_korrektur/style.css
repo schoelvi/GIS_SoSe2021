@@ -183,8 +183,8 @@ form::after{
   
     body{
         width: 500px;
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
+        margin-right: auto;
      }
 
      .circle{
