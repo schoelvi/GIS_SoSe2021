@@ -190,7 +190,7 @@ form::after{
      .circle{
         width:800px;
         height: 800px;
-        margin: -600px auto auto auto;
+        margin: -1200px auto auto auto;
     }
 
     h1{
@@ -226,7 +226,7 @@ form::after{
     .circle{
         width: 400px;
         height: 400px;
-        margin: -800px auto auto auto;
+        margin: -1000px auto auto auto;
     }
 
     p{
