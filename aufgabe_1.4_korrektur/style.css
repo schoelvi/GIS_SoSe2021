@@ -2,11 +2,7 @@ html{
     background-image: url("dateien/hintergrundbild.png");
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .circle{
     width: 800px;
@@ -181,10 +177,7 @@ form::after{
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
   
-    body{
-        margin-left: auto;
-        margin-right: auto;
-     }
+
 
      .circle{
         width:800px;
@@ -216,16 +209,13 @@ form::after{
         width: 500px;
     }
 
-    .container{
+    .portfoliobild{
         width: 500px;
     }
 }
 
 @media screen and (max-width: 600px){
-    body{
-        margin-left: auto;
-        margin-right: auto;
-    }
+
 
     h1{
         font-size: 30px;
@@ -276,6 +266,7 @@ form::after{
         margin-right: auto;
         margin-left: auto;
     }
+
 
     video{
         width: auto;
