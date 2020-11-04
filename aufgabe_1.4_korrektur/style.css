@@ -212,6 +212,14 @@ form::after{
     .topnav{
         visibility: hidden;
     }
+
+    video{
+        width: 500px;
+    }
+
+    img{
+        width: 500px;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -270,6 +278,13 @@ form::after{
         margin-left: auto;
     }
 
+    img{
+        width: auto;
+    }
+
+    video{
+        width: auto;
+    }
     /*.header.bar{
         visibility: hidden;
     }*/
