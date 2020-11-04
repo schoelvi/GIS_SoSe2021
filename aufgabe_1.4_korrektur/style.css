@@ -204,9 +204,9 @@ form::after{
     h1 + p{
         color: white;
         text-align: right;
-        margin-right: 80px;
+        margin-right: 40px;
         margin-left: 200px;
-        font-size: 22;
+        font-size: 18;
     }
 
     .topnav{
@@ -222,7 +222,9 @@ form::after{
 
     h1{
         font-size: 30px;
+        margin-top: 0;
     }
+    
     .circle{
         width: 500px;
         height: 500px;
