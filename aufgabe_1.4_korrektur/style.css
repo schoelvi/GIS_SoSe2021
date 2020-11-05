@@ -103,6 +103,7 @@ a:focus{
 }
 
 textarea {
+    transition: background-color 2s ease-in-out 0s;
     background-color: grey;
     padding: 5px;
     color: white;
@@ -122,8 +123,11 @@ form::placeholder {
     color:white;
 }
 
-form input{
+input{
     transition: background-color 2s ease-in-out 0s;
+}
+
+form input{
     background-color: grey;
     padding: 5px;
     color: white;
@@ -140,7 +144,11 @@ form input{
     width: 400px;
 }
 
- input:hover{
+input:hover{
+    background-color: #f1f1f1;
+}
+
+textarea:hover{
     background-color: #f1f1f1;
 }
 
