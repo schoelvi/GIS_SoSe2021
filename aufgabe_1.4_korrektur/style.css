@@ -87,6 +87,7 @@ p{
 
 small{
     color: grey;
+    margin-top: 20px;
 }
 
 a{
@@ -158,10 +159,16 @@ a[href="dateien/datenschutz.pdf"] {
 
 video{
     width: 800px;
+    margin-bottom: 20px;
+}
+
+audio{
+    margin-top: 20px;
 }
 
 table{
     width: auto;
+    margin-bottom: 20px;
 }
 
 .jahreszahlen{
