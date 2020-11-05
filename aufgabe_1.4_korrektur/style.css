@@ -88,6 +88,8 @@ p{
 small{
     color: grey;
     margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 50px;
 }
 
 a{
@@ -159,7 +161,7 @@ a[href="dateien/datenschutz.pdf"] {
 
 video{
     width: 800px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 audio{
