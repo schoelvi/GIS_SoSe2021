@@ -123,7 +123,7 @@ form::placeholder {
 }
 
 form input{
-    transition: background-color 4s ease-in-out 0s;
+    transition: background-color 2s ease-in-out 0s;
     background-color: grey;
     padding: 5px;
     color: white;
@@ -139,9 +139,6 @@ form input{
     margin: 0em;
     width: 400px;
 }
- form:hover{
-    background-color: #f1f1f1;
- }
 
  input:hover{
     background-color: #f1f1f1;
