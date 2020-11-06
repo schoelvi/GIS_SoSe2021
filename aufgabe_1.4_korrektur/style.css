@@ -49,13 +49,6 @@ body{
     text-decoration: none;
 }
 
-/*.seiteninhalt{
-    color: white;
-    text-align: right;
-    margin-right: 80px;
-    margin-left: 200px;
-}*/
-
 h1{
     transition: color 8s ease-in-out 0s;
     transition: top 2s ease-in-out 0s;
@@ -197,9 +190,6 @@ form::after{
     height: 30px;
     background-color:black;
 }
-/*.bilderportfolio{
-    flex-direction: column;
-}*/
 
 .topnav{
     visibility: hidden;
@@ -240,11 +230,11 @@ form::after{
     }
 
     .topnav{
-        visibility: hidden;
+        display: none;
     }
 
     video{
-        width: 500px;
+        width: 600px;
     }
 
     iframe{
@@ -252,8 +242,8 @@ form::after{
         height: 450px;
      }
 
-    .portfoliobild{
-        width: 500px;
+     .bilderportfolio img{
+        max-width: 100%;
     }
 }
 
@@ -270,8 +260,8 @@ form::after{
     }
 
     .circle{
-        width: 400px;
-        height: 400px;
+        max-width: 500px;
+        max-height: 500px;
         margin: -1000px auto auto auto;
     }
 
@@ -282,6 +272,10 @@ form::after{
 
     p{
         font-size: 24pt;
+    }
+
+    .bilderportfolio img{
+        max-width: 100%;
     }
 
     .topnav a{
@@ -327,6 +321,6 @@ form::after{
         width: 100%;
     }
     /*.header.bar{
-        visibility: hidden;
+        diplay: none;
     }*/
 }
