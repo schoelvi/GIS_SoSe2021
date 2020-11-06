@@ -8,62 +8,6 @@ body{
     margin: 0 auto;
 }
 
-.circle{
-    width: 800px;
-    height: 800px;
-    background-color:#b63514;
-    border-radius: 50%;
-    margin:-600px auto auto auto;
-    text-align: center;
-
- }
-
- iframe{
-    width: 800px;
-    height: 450px;
- }
-
-#aktuell{
-    color: #b63514;
-}
-
-#nachricht{
-    background-color: grey;
-    padding: 5px;
-    margin-top: 20px;
-}
-
-ul.header-links{
-    list-style-type: none;
-    display: flex;
-}
-
-li.header-links{
-    float: right;
-    padding: 5px 10px;
-    text-decoration: none;
-
-
-}
-
-.header-bar-inner{
-    text-align: right;
-    background-color: black;
-    padding: 5px 10px; 
-    width:320px;
-    position: fixed;
-    top:0px;
-    right:60px;
-
-}
-.header-links{
-    color: white;
-    margin-right: 15px;
-    margin-top: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
 h1{
     transition: color 8s ease-in-out 0s;
     transition: top 2s ease-in-out 0s;
@@ -74,10 +18,6 @@ h1{
     color: white;
     position: relative;
     top:0;
-}
-
-img{
-    margin-bottom: 15px;
 }
 
 h1:hover{
@@ -98,6 +38,13 @@ p{
  font-size: 16pt;
 }
 
+h1 + p{
+    color: white;
+    text-align: right;
+    margin-right: 80px;
+    margin-left: 200px;
+}
+
 small{
     color: grey;
     margin-top: 20px;
@@ -107,9 +54,12 @@ small{
 
 a{
     color:darkgrey;
-
 }
- 
+
+a[href="dateien/datenschutz.pdf"] {
+    color: #323233;
+}
+
 a:hover{
     color:#b63514;
 }
@@ -135,8 +85,9 @@ textarea {
     margin: 0em;
     width: 400px;
 }
-form::placeholder {
-    color:white;
+
+textarea:hover{
+    background-color: #f1f1f1;
 }
 
 input{
@@ -160,16 +111,17 @@ form input{
     width: 400px;
 }
 
+form::placeholder {
+    color:white;
+}
+
 input:hover{
     background-color: #f1f1f1;
 }
 
-textarea:hover{
-    background-color: #f1f1f1;
-}
-
-a[href="dateien/datenschutz.pdf"] {
-    color: #323233;
+table{
+    width: auto;
+    margin-bottom: 20px;
 }
 
 video{
@@ -180,9 +132,54 @@ audio{
     margin-top: 20px;
 }
 
-table{
-    width: auto;
-    margin-bottom: 20px;
+img{
+    margin-bottom: 15px;
+}
+
+iframe{
+    width: 800px;
+    height: 450px;
+}
+
+#aktuell{
+    color: #b63514;
+}
+
+#nachricht{
+    background-color: grey;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.header-bar-inner{
+    text-align: right;
+    background-color: black;
+    padding: 5px 10px; 
+    width:320px;
+    position: fixed;
+    top:0px;
+    right:60px;
+}
+
+.header-links{
+    color: white;
+    margin-right: 15px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.circle{
+    width: 800px;
+    height: 800px;
+    background-color:#b63514;
+    border-radius: 50%;
+    margin:-600px auto auto auto;
+    text-align: center;
+}
+
+.keinbruch{
+    white-space: nowrap;
 }
 
 .jahreszahlen{
@@ -190,13 +187,6 @@ table{
 }
 .kontakttabelle{
     width: 50%;
-}
-
-h1 + p{
-    color: white;
-    text-align: right;
-    margin-right: 80px;
-    margin-left: 200px;
 }
 
 form::after{
@@ -216,12 +206,6 @@ form::after{
     body{
         width: 600px;
         margin: 0 auto;
-    }
-
-     .circle{
-        width:600px;
-        height: 600px;
-        margin: -500px auto auto auto;
     }
 
     h1{
@@ -250,6 +234,12 @@ form::after{
         height: 450px;
      }
 
+    .circle{
+        width:600px;
+        height: 600px;
+        margin: -500px auto auto auto;
+    }
+
      .bilderportfolio img{
         max-width: 100%;
     }
@@ -264,35 +254,15 @@ form::after{
 
     h1{
         font-size: 30pt;
-        margin-top: 100px;
+        margin-top: 120px;
     }
-
-    .circle{
-        width: 100%;
-        height: 100vw;
-        margin: -400px auto auto auto;
-    }
-
-    iframe{
-        width: 100%;
-        height: 450px;
-     }
 
     p{
         font-size: 24pt;
     }
 
-    .bilderportfolio img{
-        max-width: 100%;
-    }
-
     p.seiteninhalt{
         margin-bottom: 20px;
-    }
-
-    .active{
-        background-color: black ;
-        color:  #b63514;
     }
 
     h1 + p{
@@ -301,28 +271,39 @@ form::after{
         text-align: right;
         margin-right: 10%;
         margin-left: 10%;
-    
-    }
-
-    .bilderportfolio{
-        width: 100%;
     }
 
     video{
         width: 100%;
     }
 
+    iframe{
+        width: 100%;
+        height: 450px;
+     }
+
+     .circle{
+        width: 100%;
+        height: 100vw;
+        margin: -450px auto auto auto;
+    }
+
+    .bilderportfolio img{
+        max-width: 100%;
+    }
+
+    .active{
+        background-color: black ;
+        color:  #b63514;
+    }
+
+    .bilderportfolio{
+        width: 100%;
+    }
+
     .header-links{
         font-size: 18pt;
         padding: 10px;
-    }
-
-    ul.header-links{
-        display: inline;
-    }
-
-    li.header-links{
-        margin-top: 10px;
     }
 
     .header-bar-inner{
