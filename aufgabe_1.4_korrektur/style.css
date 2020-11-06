@@ -3,6 +3,10 @@ html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body{
+    width: 800px;
+    margin: 0 auto;
+}
 
 .circle{
     width: 800px;
@@ -14,9 +18,10 @@ html{
 
  }
 
-.inhalt{
-    max-width: 800px;
-}
+ iframe{
+    width: 800px;
+    height: 450px;
+ }
 
 #aktuell{
     color: #b63514;
@@ -161,7 +166,6 @@ a[href="dateien/datenschutz.pdf"] {
 
 video{
     width: 800px;
-    margin: 20px;
 }
 
 audio{
@@ -193,9 +197,9 @@ form::after{
     height: 30px;
     background-color:black;
 }
-.container{
+/*.bilderportfolio{
     flex-direction: column;
-}
+}*/
 
 .topnav{
     visibility: hidden;
@@ -207,19 +211,20 @@ form::after{
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
-  
-    .inhalt{
-        max-width: auto;
+    
+    body{
+        width: 600px;
+        margin: 0 auto;
     }
 
      .circle{
-        width:800px;
-        height: 800px;
+        width:600px;
+        height: 600px;
         margin: -800px auto auto auto;
     }
 
     h1{
-        font-size: 40px;
+        font-size: 30pt;
     }
 
     p{
@@ -231,7 +236,7 @@ form::after{
         text-align: right;
         margin-right: 40px;
         margin-left: 200px;
-        font-size: 18;
+        font-size: 18pt;
     }
 
     .topnav{
@@ -242,6 +247,11 @@ form::after{
         width: 500px;
     }
 
+    iframe{
+        width: 600px;
+        height: 450px;
+     }
+
     .portfoliobild{
         width: 500px;
     }
@@ -249,21 +259,26 @@ form::after{
 
 @media screen and (max-width: 600px){
 
+    body{
+        width: 100%;
+        margin: 0;
+    }
 
     h1{
-        font-size: 30px;
+        font-size: 30pt;
         margin-top: 0;
     }
 
     .circle{
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
         margin: -1000px auto auto auto;
     }
 
-    .inhalt{
-        max-width: auto;
-    }
+    iframe{
+        width: 100%;
+        height: 450px;
+     }
 
     p{
         font-size: 24pt;
@@ -271,7 +286,7 @@ form::after{
 
     .topnav a{
         color: white;
-        font-size: 24px;
+        font-size: 24pt;
         display: block;
         text-decoration: none;
         padding: 20px 20px;
@@ -304,9 +319,12 @@ form::after{
         margin-left: auto;
     }
 
+    .bilderportfolio{
+        width: 100%;
+    }
 
     video{
-        width: auto;
+        width: 100%;
     }
     /*.header.bar{
         visibility: hidden;
