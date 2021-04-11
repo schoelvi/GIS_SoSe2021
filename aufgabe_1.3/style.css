@@ -110,6 +110,10 @@ td{
     width: 500px;
 }
 
+tr{
+    margin-top: 5px;
+}
+
 video{
     width: 798px;
 }
