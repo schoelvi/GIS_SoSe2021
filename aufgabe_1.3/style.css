@@ -100,3 +100,12 @@ input, textarea {
 ::placeholder {
     color:white;
 }
+
+iframe{
+    height: 450; 
+    width: 800;
+}
+
+td{
+    width: 500;
+}
