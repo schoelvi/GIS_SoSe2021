@@ -68,7 +68,7 @@ a:focus{
     color:#b63514;
 }
 
-textarea {
+textarea,button {
     transition: background-color 2s ease-in-out 0s;
     background-color: grey;
     padding: 5px;
@@ -312,45 +312,4 @@ form::after{
         padding: 20px;
     }
 
-    /* Versuch ein Hambuger Menu zu gestalten
-    .hamburg{
-        display: block;
-        background: black;
-        width: 75px;
-        height: 50px;
-        position: relative;
-        margin-left: auto;
-        margin-right: 0;
-        border-radius: 4px;
-        transition: border-radius .5s;
-
-    }
-
-    .line{
-        position: absolute;
-        left: 10px;
-        height: 4px;
-        width: 55px;
-        background: white;
-        border-radius: 2px;
-        display: block;
-        transition: 0.5s;
-        transform-origin: center;
-    }
-
-    .line:nth-child(1) {top: 12px}
-    .line:nth-child(2) {top: 24px}
-    .line:nth-child(3) {top: 36px}
-
-    .hamburg.checked .line:nth-child(1){
-        transform: translateY(12px) rotate(-45deg);
-    }
-
-    .hamburg.checked .line:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburg.checked .line:nth-child(3){
-        transform: translateY(-12px) rotate(45deg);
-    }*/
 }
