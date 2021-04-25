@@ -143,10 +143,10 @@ for (let zaehler = 1; zaehler <= 100; zaehler++) {
     else if (zaehler % 5 == 0 && zaehler % 3 != 0) {
         console.log("Buzz");
     }
-    //else if (zaehler % 5 == 0 && zaehler % 3 == 0) {console.log("FizzBuzz"); }
-    else if (zaehler % 15 == 0) {
+    else if (zaehler % 5 == 0 && zaehler % 3 == 0) {
         console.log("FizzBuzz");
     }
+    // else if (zaehler % 15 == 0) {console.log("FizzBuzz"); }
     else {
         console.log(zaehler);
     }

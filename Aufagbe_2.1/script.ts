@@ -177,8 +177,8 @@ for (let zaehler: number = 1 ; zaehler <= 100 ; zaehler++) {
 
    if (zaehler % 3 == 0 && zaehler % 5 != 0) {console.log("Fizz"); }
      else if (zaehler % 5 == 0 && zaehler % 3 != 0) {console.log("Buzz"); }
-     //else if (zaehler % 5 == 0 && zaehler % 3 == 0) {console.log("FizzBuzz"); }
-     else if (zaehler % 15 == 0) {console.log("FizzBuzz"); }
+     else if (zaehler % 5 == 0 && zaehler % 3 == 0) {console.log("FizzBuzz"); }
+     // else if (zaehler % 15 == 0) {console.log("FizzBuzz"); }
 
      else {console.log(zaehler); }
         }
