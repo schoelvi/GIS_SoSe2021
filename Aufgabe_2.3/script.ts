@@ -27,7 +27,7 @@ namespace Aufg_2_3 {
     dach.setAttribute("style", "width: 0; height: 0; border-style: solid; border-width: 0 130px 200px 130px; border-color: transparent transparent #ff0000 transparent;");
     dach.style.position = "absolute";
     dach.style.top = "60px";
-    dach.style.right = "740px";
+    dach.style.right = "460px";
     zeichenflächeDiv.appendChild(dach);
     let haus: HTMLParagraphElement = document.createElement("div");
     haus.style.backgroundColor = "orange";
