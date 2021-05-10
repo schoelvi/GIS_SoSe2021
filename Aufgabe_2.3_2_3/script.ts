@@ -22,25 +22,43 @@ namespace Aufgabe_2_3_Rest {
         hose: BildSim;
     }
 
-    let haareButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("haareButton");
+    let bildDiv: HTMLElement = <HTMLElement>document.getElementById("auswahlButtons");
+
+    let haareButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+    haareButton.id = "Haare";
+    haareButton.innerHTML = "Haare";
+    bildDiv.appendChild(haareButton);
     haareButton.addEventListener("click", openHaare);
-    let shirtButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("shirtButton");
+
+    let shirtButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+    shirtButton.id = "Shirt";
+    shirtButton.innerHTML = "Shirt";
     shirtButton.addEventListener("click", openShirt);
-    let hoseButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("hoseButton");
-    hoseButton.addEventListener("click", openHose);
+    bildDiv.appendChild(shirtButton);
+
+    let hoseButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
+    hoseButton.id = "Hose";
+    hoseButton.innerHTML = "Hose";
+    hoseButton.addEventListener("click", openHose); 
+    bildDiv.appendChild(hoseButton);   
+
+   
 
     function openHaare(): void {
         window.open("auswahlHaare.html", "_self");
+        console.log("auswahlHaare");
     }
 
     function openShirt(): void {
         window.open("auswahlShirt.html", "_self");
+        console.log("auswahlHaare");
     }
 
     function openHose(): void {
         window.open("auswahlHose.html", "_self");
+        console.log("auswahlHaare");
     }
 
 
-
+   
 }
