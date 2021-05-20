@@ -51,19 +51,9 @@ var Aufgabe_2_4_korrektur;
     function auswählen() {
         const gewaehltes = wählen();
         for (let index = 0; index < gewaehltes.length; index++) {
-            let posLeft = "";
-            let posTop = "";
-            posLeft = (index * 200) + "px";
-            posTop = 100 + "px";
             let img = document.createElement("img");
-            img.style.position = "static";
-            img.style.left = posLeft;
-            img.style.top = posTop;
-            img.style.margin = "10px";
-            img.style.height = 200 + "px";
-            img.style.width = 200 + "px";
             img.setAttribute("src", gewaehltes[index].link);
-            img.addEventListener("click", function () {
+            img.addEventListener("click", function event() {
                 speichern(gewaehltes[index].link, gewaehltes[index].typ);
                 derzeitigSim();
             });
@@ -74,44 +64,57 @@ var Aufgabe_2_4_korrektur;
     auswählen();
     function nächsteAuswahl() {
         if (window.location.href.includes("auswahlHaare.html")) {
-            if (sessionStorage.getItem("0") == null) {
+            if (sessionStorage.getItem("haare") == null) {
                 antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
                 return;
             }
             window.open("auswahlShirt.html", "_self");
         }
         if (window.location.href.includes("auswahlShirt.html")) {
+            if (sessionStorage.getItem("shirt") == null) {
+                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
+                return;
+            }
             window.open("auswahlHose.html", "_self");
         }
         if (window.location.href.includes("auswahlHose.html")) {
+            if (sessionStorage.getItem("hose") == null) {
+                antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
+                return;
+            }
             window.open("fertigSim.html", "_self");
         }
     }
     function speichern(_link, _typ) {
-        sessionStorage.setItem(_typ.toString(), _link);
+        sessionStorage.setItem(_typ, _link);
     }
     function derzeitigSim() {
         if (path == "auswahlHaare.html") {
             derzeitigAuswahl.innerHTML = "";
-            let img = document.createElement("img");
-            img.setAttribute("src", sessionStorage[0]);
-            derzeitigAuswahl.appendChild(img);
+            let imgHaare = document.createElement("img");
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
+            derzeitigAuswahl.appendChild(imgHaare);
         }
         if (path == "auswahlShirt.html") {
             derzeitigAuswahl.innerHTML = "";
-            for (let index = 0; index < 2; index++) {
-                let img = document.createElement("img");
-                img.setAttribute("src", sessionStorage[index]);
-                derzeitigAuswahl.appendChild(img);
-            }
+            let imgHaare = document.createElement("img");
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
+            derzeitigAuswahl.appendChild(imgHaare);
+            let imgShirt = document.createElement("img");
+            imgShirt.setAttribute("src", sessionStorage.getItem("shirt"));
+            derzeitigAuswahl.appendChild(imgShirt);
         }
         if (path == "auswahlHose.html") {
             derzeitigAuswahl.innerHTML = "";
-            for (let index = 0; index < 3; index++) {
-                let img = document.createElement("img");
-                img.setAttribute("src", sessionStorage[index]);
-                derzeitigAuswahl.appendChild(img);
-            }
+            let imgHaare = document.createElement("img");
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
+            derzeitigAuswahl.appendChild(imgHaare);
+            let imgShirt = document.createElement("img");
+            imgShirt.setAttribute("src", sessionStorage.getItem("shirt"));
+            derzeitigAuswahl.appendChild(imgShirt);
+            let imgHose = document.createElement("img");
+            imgHose.setAttribute("src", sessionStorage.getItem("hose"));
+            derzeitigAuswahl.appendChild(imgHose);
         }
     }
 })(Aufgabe_2_4_korrektur || (Aufgabe_2_4_korrektur = {}));

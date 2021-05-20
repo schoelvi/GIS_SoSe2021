@@ -14,7 +14,7 @@ namespace Aufgabe_2_4_korrektur {
     export interface BildSim {
         link: string;
         name: string;
-        typ: number;
+        typ: string;
     }
 
     export interface Auswahl {
