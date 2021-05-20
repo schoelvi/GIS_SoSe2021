@@ -1,10 +1,10 @@
 "use strict";
-var Aufgabe_2_4;
-(function (Aufgabe_2_4) {
-    Aufgabe_2_4.nummerHaare = 0;
-    Aufgabe_2_4.nummerShirt = 0;
-    Aufgabe_2_4.nummerHose = 0;
-    Aufgabe_2_4.auswahl = { haare: undefined, shirt: undefined, hose: undefined };
+var Aufgabe_2_4_korrektur;
+(function (Aufgabe_2_4_korrektur) {
+    Aufgabe_2_4_korrektur.nummerHaare = 0;
+    Aufgabe_2_4_korrektur.nummerShirt = 0;
+    Aufgabe_2_4_korrektur.nummerHose = 0;
+    Aufgabe_2_4_korrektur.auswahl = { haare: undefined, shirt: undefined, hose: undefined };
     let bildDiv = document.getElementById("auswahlButtons");
     let haareButton = document.createElement("button");
     haareButton.id = "Haare";
@@ -33,5 +33,5 @@ var Aufgabe_2_4;
         window.open("auswahlHose.html", "_self");
         console.log("auswahlHaare");
     }
-})(Aufgabe_2_4 || (Aufgabe_2_4 = {}));
+})(Aufgabe_2_4_korrektur || (Aufgabe_2_4_korrektur = {}));
 //# sourceMappingURL=script.js.map

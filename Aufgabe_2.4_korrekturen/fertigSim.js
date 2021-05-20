@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe_2_4;
-(function (Aufgabe_2_4) {
+var Aufgabe_2_4_korrektur;
+(function (Aufgabe_2_4_korrektur) {
     let fertigSim = document.getElementById("fertigSim");
     function speicherAnzeigen() {
         for (let index = 0; index < sessionStorage.length; index++) {
@@ -29,5 +29,5 @@ var Aufgabe_2_4;
         window.open("index.html", "_self");
         console.log("Abgebrochen");
     }
-})(Aufgabe_2_4 || (Aufgabe_2_4 = {}));
+})(Aufgabe_2_4_korrektur || (Aufgabe_2_4_korrektur = {}));
 //# sourceMappingURL=fertigSim.js.map

@@ -1,7 +1,7 @@
 "use strict";
-var Aufgabe_2_4;
-(function (Aufgabe_2_4) {
-    Aufgabe_2_4.simJSON = `
+var Aufgabe_2_4_korrektur;
+(function (Aufgabe_2_4_korrektur) {
+    Aufgabe_2_4_korrektur.simJSON = `
     {
         "haare":  [
            {"link": "assets/haare/sim1_kopf.jpg", "name": "Weiße Haare", "typ": 0}, 
@@ -25,6 +25,6 @@ var Aufgabe_2_4;
         ]        
     }
     `;
-    Aufgabe_2_4._sim = JSON.parse(Aufgabe_2_4.simJSON);
-})(Aufgabe_2_4 || (Aufgabe_2_4 = {}));
-//# sourceMappingURL=data.js.map
+    Aufgabe_2_4_korrektur.derSim = JSON.parse(Aufgabe_2_4_korrektur.simJSON);
+})(Aufgabe_2_4_korrektur || (Aufgabe_2_4_korrektur = {}));
+//# sourceMappingURL=data_korrekturen.js.map

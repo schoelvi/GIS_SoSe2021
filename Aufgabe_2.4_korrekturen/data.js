@@ -1,7 +1,7 @@
-namespace Aufgabe_2_4_korrektur {
-
-    export let simJSON: string = 
-    `
+"use strict";
+var Aufgabe_2_4_korrektur;
+(function (Aufgabe_2_4_korrektur) {
+    Aufgabe_2_4_korrektur.simJSON = `
     {
         "haare":  [
            {"link": "assets/haare/sim1_kopf.jpg", "name": "Weiße Haare", "typ": 0}, 
@@ -24,7 +24,7 @@ namespace Aufgabe_2_4_korrektur {
             {"link": "assets/hose/sim4_hose.jpg", "name": "Rote Hose", "typ": 2}
         ]        
     }
-    `
-    ;
-    export let _sim: Sim = JSON.parse(simJSON);
-}
+    `;
+    Aufgabe_2_4_korrektur._sim = JSON.parse(Aufgabe_2_4_korrektur.simJSON);
+})(Aufgabe_2_4_korrektur || (Aufgabe_2_4_korrektur = {}));
+//# sourceMappingURL=data.js.map

@@ -1,7 +1,9 @@
 namespace Aufgabe_2_4_korrektur {
 
 
-    let funktionDiv: HTMLElement = <HTMLElement>document.getElementById("funktionen");
+  // let funktionDiv: HTMLElement = <HTMLElement>document.getElementById("funktionen");
+    let buttonsDiv: HTMLElement = <HTMLElement>document.getElementById("buttons");
+    
     let path: string = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
     let antwort: HTMLElement = <HTMLElement>document.getElementById("antwort");
     let derzeitigAuswahl: HTMLElement = <HTMLElement>document.getElementById("derzeitigeAuswahl");
@@ -11,22 +13,22 @@ namespace Aufgabe_2_4_korrektur {
     speicherButton.id = "speichern";
     speicherButton.innerHTML = "speichern";
     speicherButton.addEventListener("click", nächsteAuswahl);
-    funktionDiv.appendChild(speicherButton);
+    buttonsDiv.appendChild(speicherButton);
 
     let abbrechenButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
     abbrechenButton.id = "abbrechen";
     abbrechenButton.innerHTML = "abbrechen";
     abbrechenButton.addEventListener("click", abbrechen);
-    funktionDiv.appendChild(abbrechenButton);
+    buttonsDiv.appendChild(abbrechenButton);
 
     let zurückButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
     zurückButton.id = "zurück";
     zurückButton.innerHTML = "zurück";
     zurückButton.addEventListener("click", zurück);
-    funktionDiv.appendChild(zurückButton);
+    buttonsDiv.appendChild(zurückButton);
 
     function abbrechen(): void {
-        window.open("startseit.html", "_self");
+        window.open("index.html", "_self");
         console.log("Abgebrochen");
     }
 
@@ -35,11 +37,11 @@ namespace Aufgabe_2_4_korrektur {
     function zurück(): void {
         let vorherigeSeite: string;
         if (path == "auswahlShirt.html") {
-            vorherigeSeite = "startseite.html";
+            vorherigeSeite = "auswahlHaare.html";
         } else if (path == "auswahlHose.html") {
             vorherigeSeite = "auswahlShirt.html";
-        } else if (path == "startseit.html") {
-            vorherigeSeite = "startseite.html";
+        } else if (path == "auswahlHaare.html") {
+            vorherigeSeite = "index.html";
         }
         window.open(vorherigeSeite, "_self");
     }
@@ -48,11 +50,11 @@ namespace Aufgabe_2_4_korrektur {
     let previousElement: HTMLElement = document.getElementById("funktionen");
    
     function wählen(): BildSim[] {
-        let art: BildSim[] = _sim.haare;
+        let art: BildSim[] = derSim.haare;
         if (window.location.href.includes("auswahlShirt.html"))
-            art = _sim.shirt;
+            art = derSim.shirt;
         if (window.location.href.includes("auswahlHose.html")) 
-            art = _sim.hose;
+            art = derSim.hose;
         return art;
         }
 
@@ -84,7 +86,7 @@ namespace Aufgabe_2_4_korrektur {
     auswählen();
     
     function nächsteAuswahl(): void {
-        if (window.location.href.includes("startseit.html")) {
+        if (window.location.href.includes("auswahlHaare.html")) {
             if (sessionStorage.getItem("0") == null) {
                 antwort.innerHTML = "BITTE WÄHLEN SIE ETWAS AUS.";
                 return;
@@ -92,10 +94,10 @@ namespace Aufgabe_2_4_korrektur {
             window.open("auswahlShirt.html", "_self");
         }
         if (window.location.href.includes("auswahlShirt.html")) {
-            window.open("auswahlHose.html");
+            window.open("auswahlHose.html", "_self");
         }
         if (window.location.href.includes("auswahlHose.html")) {
-            window.open("fertigSim.html");
+            window.open("fertigSim.html", "_self");
         }
 
     } 
@@ -106,20 +108,10 @@ namespace Aufgabe_2_4_korrektur {
     }
            
     function derzeitigSim(): void {
-        if (path == "startseit.html") {
+        if (path == "auswahlHaare.html") {
             derzeitigAuswahl.innerHTML = "";
-            let posLeft: string = "";
-            let posTop: string = "";
-            posLeft = (0 * 200) + "px";
-            posTop = 100 + "px";
 
             let img: HTMLElement = document.createElement("img");
-            img.style.position = "static";
-            img.style.left = posLeft;
-            img.style.top = posTop;
-            img.style.margin = "10px";
-            img.style.height = 200 + "px";
-            img.style.width = 200 + "px";
             img.setAttribute("src", sessionStorage[0]);
             
             derzeitigAuswahl.appendChild(img);
@@ -128,19 +120,7 @@ namespace Aufgabe_2_4_korrektur {
             derzeitigAuswahl.innerHTML = "";
             for (let index: number = 0; index < 2; index++) {
 
-            
-            let posLeft: string = "";
-            let posTop: string = "";
-            posLeft = (index * 200) + "px";
-            posTop = 100 + "px";
-
             let img: HTMLElement = document.createElement("img");
-            img.style.position = "static";
-            img.style.left = posLeft;
-            img.style.top = posTop;
-            img.style.margin = "10px";
-            img.style.height = 200 + "px";
-            img.style.width = 200 + "px";
             img.setAttribute("src", sessionStorage[index]);
             
             derzeitigAuswahl.appendChild(img);
@@ -150,19 +130,7 @@ namespace Aufgabe_2_4_korrektur {
             derzeitigAuswahl.innerHTML = "";
             for (let index: number = 0; index < 3; index++) {
 
-            
-            let posLeft: string = "";
-            let posTop: string = "";
-            posLeft = (index * 200) + "px";
-            posTop = 100 + "px";
-
             let img: HTMLElement = document.createElement("img");
-            img.style.position = "static";
-            img.style.left = posLeft;
-            img.style.top = posTop;
-            img.style.margin = "10px";
-            img.style.height = 200 + "px";
-            img.style.width = 200 + "px";
             img.setAttribute("src", sessionStorage[index]);
             
             derzeitigAuswahl.appendChild(img);

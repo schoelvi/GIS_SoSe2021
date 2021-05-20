@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe_2_4;
-(function (Aufgabe_2_4) {
+var Aufgabe_2_4_korrektur;
+(function (Aufgabe_2_4_korrektur) {
     let funktionDiv = document.getElementById("funktionen");
     let path = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
     let antwort = document.getElementById("antwort");
@@ -40,11 +40,11 @@ var Aufgabe_2_4;
     }
     let previousElement = document.getElementById("funktionen");
     function wählen() {
-        let art = Aufgabe_2_4._sim.haare;
+        let art = Aufgabe_2_4_korrektur._sim.haare;
         if (window.location.href.includes("auswahlShirt.html"))
-            art = Aufgabe_2_4._sim.shirt;
+            art = Aufgabe_2_4_korrektur._sim.shirt;
         if (window.location.href.includes("auswahlHose.html"))
-            art = Aufgabe_2_4._sim.hose;
+            art = Aufgabe_2_4_korrektur._sim.hose;
         return art;
     }
     function auswählen() {
@@ -143,5 +143,5 @@ var Aufgabe_2_4;
             }
         }
     }
-})(Aufgabe_2_4 || (Aufgabe_2_4 = {}));
+})(Aufgabe_2_4_korrektur || (Aufgabe_2_4_korrektur = {}));
 //# sourceMappingURL=auswahlscript.js.map

@@ -1,8 +1,8 @@
 namespace Aufgabe_2_4_korrektur {
 
     export let nummerHaare: number = 0;
-    export let nummerShirt: number = 0;
-    export let nummerHose: number = 0;
+    export let nummerShirt: number = 1;
+    export let nummerHose: number = 2;
     export let auswahl: Auswahl = {haare: undefined, shirt: undefined, hose: undefined};
 
     export interface Sim {
@@ -23,17 +23,15 @@ namespace Aufgabe_2_4_korrektur {
         hose: BildSim;
     }
 
-    /* wird jetzt nicht mehr benötigt, da die auswahlHaare.html zur Startseite wurde
-
     let bildDiv: HTMLElement = <HTMLElement>document.getElementById("auswahlButtons");
-
 
     let haareButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
     haareButton.id = "Haare";
     haareButton.innerHTML = "Haare";
     bildDiv.appendChild(haareButton);
     haareButton.addEventListener("click", openHaare);
-
+    
+/* benötigt  man nicht mehr, da man von der "startseite" als erstes auf die Haare muss
     let shirtButton: HTMLButtonElement = <HTMLButtonElement>document.createElement("button");
     shirtButton.id = "Shirt";
     shirtButton.innerHTML = "Shirt";
@@ -45,14 +43,7 @@ namespace Aufgabe_2_4_korrektur {
     hoseButton.innerHTML = "Hose";
     hoseButton.addEventListener("click", openHose); 
     bildDiv.appendChild(hoseButton);   
-
-   
-
-    function openHaare(): void {
-        window.open("auswahlHaare.html", "_self");
-        console.log("auswahlHaare");
-    }
-
+    
     function openShirt(): void {
         window.open("auswahlShirt.html", "_self");
         console.log("auswahlHaare");
@@ -63,6 +54,13 @@ namespace Aufgabe_2_4_korrektur {
         console.log("auswahlHaare");
     }
     */
+
+    function openHaare(): void {
+        window.open("auswahlHaare.html", "_self");
+        console.log("auswahlHaare");
+    }
+
+    
 
     
 }
