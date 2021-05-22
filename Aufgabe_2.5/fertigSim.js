@@ -5,13 +5,13 @@ var Aufgabe_2_5;
     let buttonsDiv = document.getElementById("buttons");
     function speicherAnzeigen() {
         let imgHaare = document.createElement("img");
-        imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
+        imgHaare.setAttribute("src", JSON.parse(sessionStorage.getItem("haare")));
         fertigSim.appendChild(imgHaare);
         let imgShirt = document.createElement("img");
-        imgShirt.setAttribute("src", sessionStorage.getItem("shirt"));
+        imgShirt.setAttribute("src", JSON.parse(sessionStorage.getItem("shirt")));
         fertigSim.appendChild(imgShirt);
         let imgHose = document.createElement("img");
-        imgHose.setAttribute("src", sessionStorage.getItem("hose"));
+        imgHose.setAttribute("src", JSON.parse(sessionStorage.getItem("hose")));
         fertigSim.appendChild(imgHose);
     }
     speicherAnzeigen();
