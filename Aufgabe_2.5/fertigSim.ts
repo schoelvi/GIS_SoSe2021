@@ -7,15 +7,15 @@ namespace Aufgabe_2_5 {
     function speicherAnzeigen(): void {
      
             let imgHaare: HTMLElement = document.createElement("img");
-            imgHaare.setAttribute("src", (sessionStorage.getItem("haare")));
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
             fertigSim.appendChild(imgHaare);
 
             let imgShirt: HTMLElement = document.createElement("img");
-            imgShirt.setAttribute("src", (sessionStorage.getItem("shirt")));
+            imgShirt.setAttribute("src", sessionStorage.getItem("shirt"));
             fertigSim.appendChild(imgShirt);
 
             let imgHose: HTMLElement = document.createElement("img");
-            imgHose.setAttribute("src", (sessionStorage.getItem("hose")));
+            imgHose.setAttribute("src", sessionStorage.getItem("hose"));
             fertigSim.appendChild(imgHose);
         
         

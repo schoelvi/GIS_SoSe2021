@@ -140,28 +140,28 @@ var Aufgabe_2_5;
         if (path == "auswahlHaare.html") {
             derzeitigAuswahl.innerHTML = "";
             let imgHaare = document.createElement("img");
-            imgHaare.setAttribute("src", (sessionStorage.getItem("haare")));
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
             derzeitigAuswahl.appendChild(imgHaare);
         }
         else if (path == "auswahlShirt.html") {
             derzeitigAuswahl.innerHTML = "";
             let imgHaare = document.createElement("img");
-            imgHaare.setAttribute("src", (sessionStorage.getItem("haare")));
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
             derzeitigAuswahl.appendChild(imgHaare);
             let imgShirt = document.createElement("img");
-            imgShirt.setAttribute("src", (sessionStorage.getItem("shirt")));
+            imgShirt.setAttribute("src", sessionStorage.getItem("shirt"));
             derzeitigAuswahl.appendChild(imgShirt);
         }
         else if (path == "auswahlHose.html") {
             derzeitigAuswahl.innerHTML = "";
             let imgHaare = document.createElement("img");
-            imgHaare.setAttribute("src", (sessionStorage.getItem("haare")));
+            imgHaare.setAttribute("src", sessionStorage.getItem("haare"));
             derzeitigAuswahl.appendChild(imgHaare);
             let imgShirt = document.createElement("img");
-            imgShirt.setAttribute("src", (sessionStorage.getItem("shirt")));
+            imgShirt.setAttribute("src", sessionStorage.getItem("shirt"));
             derzeitigAuswahl.appendChild(imgShirt);
             let imgHose = document.createElement("img");
-            imgHose.setAttribute("src", (sessionStorage.getItem("hose")));
+            imgHose.setAttribute("src", sessionStorage.getItem("hose"));
             derzeitigAuswahl.appendChild(imgHose);
         }
     }
