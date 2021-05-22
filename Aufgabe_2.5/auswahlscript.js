@@ -133,9 +133,9 @@ var Aufgabe_2_5;
             window.open("fertigSim.html", "_self");
         }
     }
-    //  function speichern(_link: string, _typ: string): void {
-    //      sessionStorage.setItem(_typ, _link);
-    //  }
+    function speichern(_link, _typ) {
+        sessionStorage.setItem(_typ, _link);
+    }
     function derzeitigSim() {
         if (path == "auswahlHaare.html") {
             derzeitigAuswahl.innerHTML = "";

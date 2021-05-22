@@ -157,10 +157,10 @@ namespace Aufgabe_2_5 {
 
     } 
 
-  //  function speichern(_link: string, _typ: string): void {
+    function speichern(_link: string, _typ: string): void {
         
-  //      sessionStorage.setItem(_typ, _link);
-  //  }
+        sessionStorage.setItem(_typ, _link);
+    }
            
     function derzeitigSim(): void {
         if (path == "auswahlHaare.html") {
