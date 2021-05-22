@@ -1,9 +1,8 @@
-namespace Aufgabe_2_4_korrektur {
+namespace Aufgabe_2_5 {
 
 
-  // let funktionDiv: HTMLElement = <HTMLElement>document.getElementById("funktionen");
     let buttonsDiv: HTMLElement = <HTMLElement>document.getElementById("buttons");
-    
+    let bilderDiv: HTMLElement = document.getElementById("funktionen");
     let path: string = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
     let antwort: HTMLElement = <HTMLElement>document.getElementById("antwort");
     let derzeitigAuswahl: HTMLElement = <HTMLElement>document.getElementById("derzeitigeAuswahl");
@@ -47,9 +46,51 @@ namespace Aufgabe_2_4_korrektur {
     }
 
 
-    let previousElement: HTMLElement = document.getElementById("funktionen");
+   // let previousElement: HTMLElement = document.getElementById("funktionen");
    
-    function wählen(): BildSim[] {
+    ladeBilderAusJSON("data.json");
+
+    async function ladeBilderAusJSON(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url);
+        let json: string = JSON.stringify(await response.json());
+        let objectJson: Sim = JSON.parse(json);
+        if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "auswahlHaare.html") {
+
+            for (let index: number = 0; index < objectJson.haare.length; index++) {
+                let meinbild: HTMLImageElement = document.createElement("img");
+                meinbild.addEventListener("click", function (): void { auswählen(objectJson.haare[index]); });
+               // meinbild.src = objectJson.haare[index].link;
+                meinbild.setAttribute("src", objectJson.haare[index].link);
+
+                bilderDiv.appendChild(meinbild);
+            }
+        } else if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "auswahlShirt.html") {
+
+            for (let index: number = 0; index < objectJson.shirt.length; index++) {
+                let meinbild: HTMLImageElement = document.createElement("img");
+
+                meinbild.addEventListener("click", function (): void {auswählen(objectJson.shirt[index]); });
+               // meinbild.src = objectJson.shirt[index].link;
+                meinbild.setAttribute("src", objectJson.shirt[index].link);
+
+                bilderDiv.appendChild(meinbild);
+            } 
+        } else if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "auswahlHose.html") {
+
+            for (let index: number = 0; index < objectJson.hose.length; index++) {
+                let meinbild: HTMLImageElement = document.createElement("img");
+                meinbild.addEventListener("click", function (): void {auswählen(objectJson.hose[index]); });
+               // meinbild.src = objectJson.hose[index].link;
+                meinbild.setAttribute("src", objectJson.hose[index].link);
+
+                bilderDiv.appendChild(meinbild);
+            }
+        }
+        
+        
+    }
+
+  /*  function wauswählenhlen(): BildSim[] {
         let art: BildSim[] = derSim.haare;
         if (window.location.href.includes("auswahlShirt.html"))
             art = derSim.shirt;
@@ -58,8 +99,10 @@ namespace Aufgabe_2_4_korrektur {
         return art;
         }
 
-    function auswählen(): void {
-        const gewaehltes: BildSim[] = wählen();
+    */
+    
+    /*function auswählen(): void {
+        const gewaehltes: BildSim[] = ladeBilderAusJSON();
         for (let index: number = 0; index < gewaehltes.length; index++) {
 
             let img: HTMLElement = document.createElement("img");
@@ -71,10 +114,23 @@ namespace Aufgabe_2_4_korrektur {
             previousElement.appendChild(img);
         }
         
-    }   
-    
+    } */
 
-    auswählen();
+    function auswählen(_bild: BildSim): void {
+        if (_bild.typ == nummerHaare) {
+            auswahl.haare = _bild;
+        }
+        if (_bild.typ == nummerShirt) {
+            auswahl.shirt = _bild;
+        }
+        if (_bild.typ == nummerHose) {
+            auswahl.hose = _bild;
+        }
+        let auswahlJSON: string = JSON.stringify(auswahl);
+        sessionStorage.setItem("" + _bild.typ, auswahlJSON);
+    }
+
+
     
     function nächsteAuswahl(): void {
         if (window.location.href.includes("auswahlHaare.html")) {
@@ -101,10 +157,10 @@ namespace Aufgabe_2_4_korrektur {
 
     } 
 
-    function speichern(_link: string, _typ: string): void {
+  //  function speichern(_link: string, _typ: string): void {
         
-        sessionStorage.setItem(_typ, _link);
-    }
+  //      sessionStorage.setItem(_typ, _link);
+  //  }
            
     function derzeitigSim(): void {
         if (path == "auswahlHaare.html") {

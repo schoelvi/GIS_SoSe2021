@@ -1,0 +1,19 @@
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+img {
+
+    position: static;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+#ganzBild {
+    height: auto;
+    width: auto;
+}
+
