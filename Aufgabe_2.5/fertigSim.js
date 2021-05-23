@@ -24,5 +24,26 @@ var Aufgabe_2_5;
         window.open("auswahlHaare.html", "_self");
         console.log("Abgebrochen");
     }
+    if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "fertigSim.html") {
+        servercheck();
+    }
+    async function servercheck() {
+        // tslint:disable-next-line: no-any
+        let query = new URLSearchParams(sessionStorage);
+        let url = "https://gis-communication.herokuapp.com";
+        url = url + "?" + query.toString();
+        let serverantwort = await fetch(url);
+        let rückmeldung = await serverantwort.json();
+        if (rückmeldung.error != undefined) {
+            console.log(rückmeldung.error);
+            let messagediv = document.getElementById("error");
+            messagediv.appendChild(document.createTextNode("" + rückmeldung.error));
+        }
+        else if (rückmeldung.message != undefined) {
+            console.log(rückmeldung.message);
+            let messagediv = document.getElementById("message");
+            messagediv.appendChild(document.createTextNode("" + rückmeldung.message));
+        }
+    }
 })(Aufgabe_2_5 || (Aufgabe_2_5 = {}));
 //# sourceMappingURL=fertigSim.js.map

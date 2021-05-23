@@ -1,8 +1,8 @@
 "use strict";
 var Aufgabe_2_5;
 (function (Aufgabe_2_5) {
+    // let funktionDiv: HTMLElement = <HTMLElement>document.getElementById("funktionen");
     let buttonsDiv = document.getElementById("buttons");
-    let bilderDiv = document.getElementById("funktionen");
     let path = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
     let antwort = document.getElementById("antwort");
     let derzeitigAuswahl = document.getElementById("derzeitigeAuswahl");
@@ -39,76 +39,35 @@ var Aufgabe_2_5;
         }
         window.open(vorherigeSeite, "_self");
     }
-    // let previousElement: HTMLElement = document.getElementById("funktionen");
-    ladeBilderAusJSON("data.json");
-    async function ladeBilderAusJSON(_url) {
-        let response = await fetch(_url);
-        let json = JSON.stringify(await response.json());
-        let objectJson = JSON.parse(json);
-        if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "auswahlHaare.html") {
-            for (let index = 0; index < objectJson.haare.length; index++) {
-                let meinbild = document.createElement("img");
-                meinbild.addEventListener("click", function () { auswählen(objectJson.haare[index]); });
-                // meinbild.src = objectJson.haare[index].link;
-                meinbild.setAttribute("src", objectJson.haare[index].link);
-                bilderDiv.appendChild(meinbild);
-            }
-        }
-        else if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "auswahlShirt.html") {
-            for (let index = 0; index < objectJson.shirt.length; index++) {
-                let meinbild = document.createElement("img");
-                meinbild.addEventListener("click", function () { auswählen(objectJson.shirt[index]); });
-                // meinbild.src = objectJson.shirt[index].link;
-                meinbild.setAttribute("src", objectJson.shirt[index].link);
-                bilderDiv.appendChild(meinbild);
-            }
-        }
-        else if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "auswahlHose.html") {
-            for (let index = 0; index < objectJson.hose.length; index++) {
-                let meinbild = document.createElement("img");
-                meinbild.addEventListener("click", function () { auswählen(objectJson.hose[index]); });
-                // meinbild.src = objectJson.hose[index].link;
-                meinbild.setAttribute("src", objectJson.hose[index].link);
-                bilderDiv.appendChild(meinbild);
-            }
-        }
+    let previousElement = document.getElementById("funktionen");
+    function wählen(_sim) {
+        let art = _sim.haare;
+        if (window.location.href.includes("auswahlShirt.html"))
+            art = _sim.shirt;
+        if (window.location.href.includes("auswahlHose.html"))
+            art = _sim.hose;
+        return art;
     }
-    /*  function wauswählenhlen(): BildSim[] {
-          let art: BildSim[] = derSim.haare;
-          if (window.location.href.includes("auswahlShirt.html"))
-              art = derSim.shirt;
-          if (window.location.href.includes("auswahlHose.html"))
-              art = derSim.hose;
-          return art;
-          }
-  
-      */
-    /*function auswählen(): void {
-        const gewaehltes: BildSim[] = ladeBilderAusJSON();
-        for (let index: number = 0; index < gewaehltes.length; index++) {
-
-            let img: HTMLElement = document.createElement("img");
-            img.setAttribute("src", gewaehltes[index].link);
-            img.addEventListener("click", function event(): void {speichern(gewaehltes[index].link, gewaehltes[index].typ); derzeitigSim();
+    async function transformieren(_url) {
+        let antwort = await fetch(_url);
+        let inhalt = await antwort.json();
+        console.log("Antwort", inhalt);
+        let wahl = wählen(inhalt);
+        auswählen(wahl);
+    }
+    transformieren("data.json");
+    function auswählen(_ausgewählt) {
+        //const gewaehltes: BildSim[] = wählen();
+        for (let index = 0; index < _ausgewählt.length; index++) {
+            let img = document.createElement("img");
+            img.setAttribute("src", _ausgewählt[index].link);
+            img.addEventListener("click", function event() {
+                speichern(_ausgewählt[index].link, _ausgewählt[index].typ);
+                derzeitigSim();
             });
-
-            img.id = gewaehltes[index].name;
+            img.id = _ausgewählt[index].name;
             previousElement.appendChild(img);
         }
-        
-    } */
-    function auswählen(_bild) {
-        if (_bild.typ == Aufgabe_2_5.nummerHaare) {
-            Aufgabe_2_5.auswahl.haare = _bild;
-        }
-        if (_bild.typ == Aufgabe_2_5.nummerShirt) {
-            Aufgabe_2_5.auswahl.shirt = _bild;
-        }
-        if (_bild.typ == Aufgabe_2_5.nummerHose) {
-            Aufgabe_2_5.auswahl.hose = _bild;
-        }
-        let auswahlJSON = JSON.stringify(Aufgabe_2_5.auswahl);
-        sessionStorage.setItem("" + _bild.typ, auswahlJSON);
     }
     function nächsteAuswahl() {
         if (window.location.href.includes("auswahlHaare.html")) {
