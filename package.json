@@ -1,0 +1,22 @@
+{
+  "name": "gis_sose2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./Aufgabe_3.1/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoelvi/GIS_SoSe2021.git"
+  },
+  "author": "Vivien Schöllkopf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoelvi/GIS_SoSe2021/issues"
+  },
+  "homepage": "https://github.com/schoelvi/GIS_SoSe2021#readme",
+  "devDependencies": {
+    "@types/node": "^15.6.1"
+  }
+}
