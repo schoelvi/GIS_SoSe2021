@@ -2,8 +2,8 @@
 var Aufgabe_3_1;
 (function (Aufgabe_3_1) {
     let formData = new FormData(document.forms[0]);
-    let btSend = document.getElementById("login");
-    btSend.addEventListener("click", login);
+    let btLogin = document.getElementById("login");
+    btLogin.addEventListener("click", login);
     async function login() {
         let url = "https://gis2021vs.herokuapp.com/";
         // tslint:disable-next-line: no-any

@@ -2,8 +2,8 @@ namespace Aufgabe_3_1 {
 
     let formData: FormData = new FormData(document.forms[0]);
     
-    let btSend: HTMLButtonElement = <HTMLButtonElement>document.getElementById("login");
-    btSend.addEventListener("click", login);
+    let btLogin: HTMLButtonElement = <HTMLButtonElement>document.getElementById("login");
+    btLogin.addEventListener("click", login);
 
     async function login(): Promise<void> {
         let url: string = "https://gis2021vs.herokuapp.com/";
@@ -15,8 +15,5 @@ namespace Aufgabe_3_1 {
         console.log("Answer:");
         console.log(text);
     }
-    
-
-
-    
+       
 }
