@@ -5,6 +5,7 @@ namespace Aufgabe_3_1 {
     let btLogin: HTMLButtonElement = <HTMLButtonElement>document.getElementById("login");
     btLogin.addEventListener("click", login);
 
+
     async function login(): Promise<void> {
         let url: string = "https://gis2021vs.herokuapp.com/";
         // tslint:disable-next-line: no-any
