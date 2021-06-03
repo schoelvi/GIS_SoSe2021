@@ -11,8 +11,9 @@ namespace Aufgabe_3_1 {
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let url: string = "https://gis2021vs.herokuapp.com/";
-
         url = url + "?" + query.toString();
+        console.log("test" + query.toString());
+
         let response: Response = await fetch(url);
         let text: string = await response.text();
         console.log("Answer:");
