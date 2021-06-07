@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>    
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Bitte hier anmelden!</h1>
+    <form action="https://gis2021vs.herokuapp.com/" method="get">
+        <input name="benutzername" type="text" placeholder="Benutzername">
+        <input name="passwort" type="text" placeholder="Passwort" required>
+        <button type="button" id="sendHtml">Abschicken HTML</button>
+        <button type="button" id="sendJson">Abschicken JSON</button>
+        <p id="antwort"></p>
+    </form>
+</body>
+</html>
