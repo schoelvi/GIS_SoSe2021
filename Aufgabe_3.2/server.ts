@@ -31,9 +31,9 @@ export namespace Aufgabe_3_2 {
                     _response.write(key + ": " + url.query [key] + "<br/>");
                 }
             } else if (pfad == "/json") {
-                let jsonString: string = JSON.stringify(url.query);
-                console.log(jsonString);
-                _response.write(jsonString);
+               // let jsonString: string = JSON.stringify(url.query);
+              //  console.log(jsonString);
+                _response.write("test");
             }
         }
         _response.end(); 

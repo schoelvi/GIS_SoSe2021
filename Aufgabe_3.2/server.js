@@ -30,9 +30,9 @@ var Aufgabe_3_2;
                 }
             }
             else if (pfad == "/json") {
-                let jsonString = JSON.stringify(url.query);
-                console.log(jsonString);
-                _response.write(jsonString);
+                // let jsonString: string = JSON.stringify(url.query);
+                //  console.log(jsonString);
+                _response.write("test");
             }
         }
         _response.end();
