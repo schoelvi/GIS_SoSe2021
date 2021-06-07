@@ -24,16 +24,17 @@ export namespace Aufgabe_3_2 {
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
         if (_request.url) {
+
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let pfad: string = <string>url.pathname;
+
             if (pfad == "/html") {
                 for (let key in url.query) {
                     _response.write(key + ": " + url.query [key] + "<br/>");
                 }
             } else if (pfad == "/json") {
-               // let jsonString: string = JSON.stringify(url.query);
-              //  console.log(jsonString);
-                _response.write("test");
+                _response.setHeader("content-type", "application/json"); 
+                _response.write(JSON.stringify(url.query));
             }
         }
         _response.end(); 

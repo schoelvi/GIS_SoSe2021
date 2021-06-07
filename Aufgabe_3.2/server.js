@@ -30,9 +30,8 @@ var Aufgabe_3_2;
                 }
             }
             else if (pfad == "/json") {
-                // let jsonString: string = JSON.stringify(url.query);
-                //  console.log(jsonString);
-                _response.write("test");
+                _response.setHeader("content-type", "application/json");
+                _response.write(JSON.stringify(url.query));
             }
         }
         _response.end();

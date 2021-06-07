@@ -1,6 +1,8 @@
 namespace Aufgabe_3_2 {
     
     let url: string = "https://gis2021vs.herokuapp.com/";
+   // let url: string = "http://localhost:8100/";
+
 
     let answer: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("antwort");
 
@@ -11,13 +13,13 @@ namespace Aufgabe_3_2 {
     btJson.addEventListener("click", sendJson);
 
     async function sendHtml(): Promise<void> {
-        let response: Response = await send(url + "/html");
+        let response: Response = await send(url + "html");
         let text: string = await response.text();
         answer.innerHTML = "ServerAntwort:<br/>" + text;
     }
 
     async function sendJson(): Promise<void> {
-        let response: Response = await send(url + "/json");
+        let response: Response = await send(url + "json");
         let json: JSON = await response.json();
         console.log("Answer:");
         console.log(json);
@@ -33,4 +35,3 @@ namespace Aufgabe_3_2 {
         return response;
     }
 }
-       

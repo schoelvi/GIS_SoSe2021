@@ -2,18 +2,19 @@
 var Aufgabe_3_2;
 (function (Aufgabe_3_2) {
     let url = "https://gis2021vs.herokuapp.com/";
+    // let url: string = "http://localhost:8100/";
     let answer = document.getElementById("antwort");
     let btHtml = document.getElementById("sendHtml");
     btHtml.addEventListener("click", sendHtml);
     let btJson = document.getElementById("sendJson");
     btJson.addEventListener("click", sendJson);
     async function sendHtml() {
-        let response = await send(url + "/html");
+        let response = await send(url + "html");
         let text = await response.text();
         answer.innerHTML = "ServerAntwort:<br/>" + text;
     }
     async function sendJson() {
-        let response = await send(url + "/json");
+        let response = await send(url + "json");
         let json = await response.json();
         console.log("Answer:");
         console.log(json);
