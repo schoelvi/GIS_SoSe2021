@@ -63,6 +63,11 @@ for (const _student of studentArray) {
 */
 // Teilaufgabe 5 
 class Student {
+    vorName;
+    nachName;
+    matrikelNummer;
+    fakultaet;
+    studiengang;
     constructor(_vorName, _nachName, _matrikelNummer, _faktultaet, _studiengang) {
         this.vorName = _vorName;
         this.nachName = _nachName;
@@ -162,9 +167,13 @@ context.arc(85, 110, 80, 0, 2 * Math.PI, false);
 context.fill();
 context.closePath();
 class Rechteck {
+    xAchse1;
+    xAchse2;
+    yAchse1;
+    yAchse2;
+    maximumHeight = 350;
+    maximumWidth = 550;
     constructor() {
-        this.maximumHeight = 350;
-        this.maximumWidth = 550;
         this.xAchse1 = this.zufallsZahl(0, this.maximumWidth);
         this.xAchse2 = this.zufallsZahl(this.xAchse1, this.maximumWidth);
         this.yAchse1 = this.zufallsZahl(0, this.maximumHeight);
