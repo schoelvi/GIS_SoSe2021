@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/game.js" defer></script>
+    <title>Memory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Teste dein Gedächtnis</h1>
+    <div id=anleitung>
+        <details>
+            <summary>kurze Anleitung </summary>
+            <p>Nacheinander dürfen immer zwei Karten aufgedeckt werden. Sind die aufgedeckten Karten verschieden, werden
+                sie automatisch wieder umgedreht und Sie haben einen weiteren Versuch passenden Paare zu finden. Sind
+                die aufgedeckten Karten gleich werden sie „aus dem Spiel genommen“. Ziel ist es schnellstmöglich alle
+                Paare zu finden. </p>
+    </div>
+
+    <button type="button" id="start">Spiel starten</button>
+
+    <table>
+        <tr>
+            <td> <img id="bild1" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild2" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild3" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild4" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+        </tr>
+        <tr>
+            <td> <img id="bild5" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild6" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild7" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild8" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+        </tr>
+        <tr>
+            <td> <img id="bild9" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild10" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild11" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild12" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+        </tr>
+        <tr>
+            <td> <img id="bild13" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild14" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild15" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img id="bild16" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+        </tr>
+    </table>
+
+    <button type="button" id="newGame">Neues Spiel</button>
+    <button type="button" id="delete">Spiel beenden</button>
+    <button type="button" id="admin">Einstellungen</button>
+    <button type="button" id="showHighscore">Ranking anzeigen</button>
+
+</body>
+
+</html>

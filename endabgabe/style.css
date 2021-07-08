@@ -1,0 +1,74 @@
+html {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50 pt;
+    text-transform: uppercase;
+}
+
+button {
+    position: relative;
+	margin: 0.5em;
+	padding: 1em;
+	width: 200px;
+	background: white;
+	cursor: pointer;
+	border: none;
+	text-align: center;
+}
+
+input {
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 260px;
+    height: 30px;
+}
+
+table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table img{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+}
+
+.bilderAdmin{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+}
+#logo_startseite {
+    height: 400px;
+    width: auto;
+}
+
+#logo_transparent {
+    height: 400px;
+    width: auto;
+    opacity: 0.2;
+    position: relative;
+    margin-top: -300px;
+}
+
+#hintergrund {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(dateien/icon_rueckseite_02.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+}
