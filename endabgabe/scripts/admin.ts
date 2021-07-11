@@ -18,7 +18,7 @@ namespace Endabgabe {
 
     let bildLoeschenButton: HTMLElement = <HTMLElement>document.getElementById("loeschen");
     bildLoeschenButton.addEventListener("click", deleteBild);
-    
+
     let gameButton: HTMLElement = <HTMLElement> document.getElementById("game");
     gameButton.addEventListener("click", openGame);
     function openGame(): void {
@@ -29,8 +29,8 @@ namespace Endabgabe {
     //Eingefügte URL an die Datenbank schicken
     async function bildHinzufuegen(): Promise<void> {
 
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url = "http://localhost:8100/";
 
         let formData: FormData = new FormData(document.forms[0]);
         urlsearchParameters = new URLSearchParams(<any>formData);
@@ -45,8 +45,8 @@ namespace Endabgabe {
     // Bilder aus der Datenbank anzeigen lassen und sie fürs löschen bzw. auswählen vorbereiten
     async function showBild(): Promise<void> {
 
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url = "http://localhost:8100/";
 
         console.log("Daten empfangen");
         url += "bildReceive";
@@ -75,8 +75,8 @@ namespace Endabgabe {
             answer.innerText = "Es muss ein Bild angeklickt sein. "
             return;
         }
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url = "http://localhost:8100/";
 
         console.log("Bild gelöscht");
         url += "bildLoeschen" + "?" + "name=" + angeklickt;

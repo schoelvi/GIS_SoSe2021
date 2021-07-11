@@ -30,8 +30,8 @@ namespace Endabgabe {
         if (sperren1.value == "" && sperren2.value == "") {
             hinweis.innerHTML = "Beide Felder müssen ausgefüllt sein.";
         } else {
-            //url = "https://gis2021vs.herokuapp.com/";
-            url = "http://localhost:8100/";
+            url = "https://gis2021vs.herokuapp.com/";
+            //url = "http://localhost:8100/";
 
             let formData: FormData = new FormData(document.forms[0]);
             urlsearchParameters = new URLSearchParams(<any>formData);

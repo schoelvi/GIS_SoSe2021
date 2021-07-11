@@ -71,8 +71,8 @@ async function neueKarten(): Promise<void> {
     ersteKarteIndex = null;
     spielFertig = false;
 
-    //url = "https://gis2021vs.herokuapp.com/";
-    url = "http://localhost:8100/";
+    url = "https://gis2021vs.herokuapp.com/";
+    //url = "http://localhost:8100/";
 
     console.log("Daten empfangen");
     url += "bildReceive";

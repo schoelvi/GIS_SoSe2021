@@ -17,8 +17,8 @@ namespace Endabgabe {
     // Laden der gespeichtern Daten
     async function receive(): Promise<void> {
  
-        //url = "https://gis2021vs.herokuapp.com/";
-        url =  "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url =  "http://localhost:8100/";
 
         console.log("Daten empfangen");
         url += "highscoreReceive";

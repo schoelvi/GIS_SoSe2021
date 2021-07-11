@@ -13,8 +13,8 @@ var Endabgabe;
     }
     // Laden der gespeichtern Daten
     async function receive() {
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url =  "http://localhost:8100/";
         console.log("Daten empfangen");
         url += "highscoreReceive";
         let response = await fetch(url);

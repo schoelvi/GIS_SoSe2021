@@ -26,8 +26,8 @@ var Endabgabe;
             hinweis.innerHTML = "Beide Felder müssen ausgefüllt sein.";
         }
         else {
-            //url = "https://gis2021vs.herokuapp.com/";
-            url = "http://localhost:8100/";
+            url = "https://gis2021vs.herokuapp.com/";
+            //url = "http://localhost:8100/";
             let formData = new FormData(document.forms[0]);
             urlsearchParameters = new URLSearchParams(formData);
             url += "datenSenden" + "?" + urlsearchParameters.toString() + "&" + "Zeit=" + localStorage.getItem("Zeit") + "&" + "Versuche=" + localStorage.getItem("Versuche");

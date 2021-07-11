@@ -19,8 +19,8 @@ var Endabgabe;
     }
     //Eingefügte URL an die Datenbank schicken
     async function bildHinzufuegen() {
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url = "http://localhost:8100/";
         let formData = new FormData(document.forms[0]);
         urlsearchParameters = new URLSearchParams(formData);
         console.log("URL gesendet");
@@ -31,8 +31,8 @@ var Endabgabe;
     }
     // Bilder aus der Datenbank anzeigen lassen und sie fürs löschen bzw. auswählen vorbereiten
     async function showBild() {
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url = "http://localhost:8100/";
         console.log("Daten empfangen");
         url += "bildReceive";
         let response = await fetch(url);
@@ -59,8 +59,8 @@ var Endabgabe;
             answer.innerText = "Es muss ein Bild angeklickt sein. ";
             return;
         }
-        //url = "https://gis2021vs.herokuapp.com/";
-        url = "http://localhost:8100/";
+        url = "https://gis2021vs.herokuapp.com/";
+        //url = "http://localhost:8100/";
         console.log("Bild gelöscht");
         url += "bildLoeschen" + "?" + "name=" + angeklickt;
         let response = await fetch(url);
