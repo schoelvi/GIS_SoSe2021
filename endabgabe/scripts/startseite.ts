@@ -1,7 +1,5 @@
 namespace Endabgabe {
 
-   // let path: string = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
-
     let gameButton: HTMLElement = <HTMLElement> document.getElementById("game");
     gameButton.addEventListener("click", openGame);
 

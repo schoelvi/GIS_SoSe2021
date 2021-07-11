@@ -49,8 +49,14 @@ var Endabgabe;
             if (pfad == "/urlSenden") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
                 await dataBild.insertOne(url.query);
-                _response.write("Daten gespeichert");
+                _response.write("Daten gespeichert, Seite bitte neu laden");
                 console.log("hallo");
+            }
+            if (pfad == "/highscoreReceive") {
+                _response.setHeader("content-type", "JSON; charset=utf-8");
+                let allData = await dataAntwort.find().sort({ Zeit: 1 }).toArray();
+                let allDataString = JSON.stringify(allData);
+                _response.write(allDataString);
             }
             if (pfad == "/datenReceive") {
                 _response.setHeader("content-type", "JSON; charset=utf-8");
@@ -64,10 +70,11 @@ var Endabgabe;
                 let allDataString = JSON.stringify(allData);
                 _response.write(allDataString);
             }
-            if (pfad == "/datenLoeschen") {
+            if (pfad == "/bildLoeschen") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
-                await dataAntwort.drop();
-                _response.write("Daten gelöscht");
+                console.log(url.query.name);
+                await dataBild.findOneAndDelete({ "_id": new Mongo.ObjectId(url.query.name) });
+                _response.write("Bild gelöscht, bitte Seite neu laden.");
             }
         }
         _response.end();

@@ -8,9 +8,19 @@
     <title>Memory</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+<header>
+    <div id="iconShowHighscore">
+        <img  src="dateien/icon_ranking.png" alt="Icon Ranking">
+        <figcaption>Ranking anzeigen</figcaption>
+    </div>
+   
+    <div id="admin">
+        <img src="dateien/icon_einstellungen.png" alt="Icon Einstellungen"></img> 
+        <figcaption>Bilder verwalten</figcaption>
+    </div>
+</header>
 <body>
-    <h1>Teste dein Gedächtnis</h1>
+    <h1 id="abstandHeader">Teste dein Gedächtnis</h1>
     <div id=anleitung>
         <details>
             <summary>kurze Anleitung </summary>
@@ -21,54 +31,53 @@
     </div>
 
     <button type="button" id="start">Spiel starten</button>
+    <button type="button" id="newGame">Neues Spiel</button>
+    <button type="button" id="stopp">Spiel stoppen</button>
+
+    <p id="spielanzeige">Zeit: <span id="time-minutes">0</span>:<span id="time-seconds">00</span> Versuche: <span id="versuche">00</span></p>
 
     <table>
         <tr>
-            <td> <img id="bild1" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild1" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild2" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild2" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild3" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild3" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild4" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
-            </td>
-        </tr>
-        <tr>
-            <td> <img id="bild5" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
-            </td>
-            <td> <img id="bild6" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
-            </td>
-            <td> <img id="bild7" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
-            </td>
-            <td> <img id="bild8" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild4" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
         </tr>
         <tr>
-            <td> <img id="bild9" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild5" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild10" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild6" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild11" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild7" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild12" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild8" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
         </tr>
         <tr>
-            <td> <img id="bild13" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild9" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild14" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild10" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild15" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild11" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
-            <td> <img id="bild16" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            <td> <img class="spiel" id="bild12" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+        </tr>
+        <tr>
+            <td> <img class="spiel" id="bild13" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img class="spiel" id="bild14" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img class="spiel" id="bild15" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
+            </td>
+            <td> <img class="spiel" id="bild16" src="dateien/icon_rueckseite_03.png" alt="Memory Rückseite">
             </td>
         </tr>
     </table>
-
-    <button type="button" id="newGame">Neues Spiel</button>
-    <button type="button" id="delete">Spiel beenden</button>
-    <button type="button" id="admin">Einstellungen</button>
-    <button type="button" id="showHighscore">Ranking anzeigen</button>
 
 </body>
 
