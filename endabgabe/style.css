@@ -116,6 +116,7 @@ span{
     margin-top: -60px;
     width: 40px;
     cursor: pointer;
+    text-align: center;
 }
  
 
@@ -128,11 +129,13 @@ span{
 }
 
 #adminText{
-    margin-right: 40px;
+    margin-right: 50px;
     float: right; 
     margin-top: -60px;
     width: 40px;
     cursor: pointer;
+    text-align: center;
+
 }
    
  
