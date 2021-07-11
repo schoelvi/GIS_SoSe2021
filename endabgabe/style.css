@@ -38,6 +38,8 @@ table{
     justify-content: center;
 }
 
+
+
 table img{
     width: 150px;
     height: 150px;
@@ -48,10 +50,6 @@ span{
     justify-content: center;
 }
 
-header img{
-    width: 40px;
-    cursor: pointer;
-}
 .bilderAdmin{
     width: 150px;
     height: 150px;
@@ -105,18 +103,39 @@ header img{
 }
 
 #iconShowHighscore{
-    margin: 10px;
+    margin: 20px;
     float: left;  
     margin-top: -110px;
+    width: 40px;
+    cursor: pointer;
+}
 
- }
+#iconShowHighscoreText{
+    margin: 10px;
+    float: left;  
+    margin-top: -60px;
+    width: 40px;
+    cursor: pointer;
+}
+ 
 
 #admin{
-    margin: 10px;
+    margin: 20px;
     float: right; 
     margin-top: -110px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#adminText{
+    margin-right: 40px;
+    float: right; 
+    margin-top: -60px;
+    width: 40px;
+    cursor: pointer;
+}
    
- }
+ 
 
 @media screen and (max-width: 600px){
     #logo_startseite {
