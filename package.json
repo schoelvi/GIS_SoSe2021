@@ -1,7 +1,6 @@
 {
-  "name": "gis_sose2021",
+  "name": "login",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node endabgabe/scripts/server.js"
@@ -25,5 +24,6 @@
     "mongodb": "^3.6.9",
     "tslint": "^6.1.3",
     "typescript": "^4.3.4"
-  }
+  },
+  "description": ""
 }

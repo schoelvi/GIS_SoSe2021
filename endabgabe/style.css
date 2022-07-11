@@ -15,13 +15,13 @@ h1 {
 
 button {
     position: relative;
-	margin: 0.5em;
-	padding: 1em;
-	width: 200px;
-	background: white;
-	cursor: pointer;
-	border: none;
-	text-align: center;
+    margin: 0.5em;
+    padding: 1em;
+    width: 200px;
+    background: white;
+    cursor: pointer;
+    border: none;
+    text-align: center;
 }
 
 input {
@@ -31,7 +31,7 @@ input {
     height: 30px;
 }
 
-table{
+table {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -40,25 +40,35 @@ table{
 
 
 
-table img{
+table img {
     width: 150px;
     height: 150px;
     margin: 5px;
 }
-span{
+
+span {
     color: red;
     justify-content: center;
 }
 
-.bilderAdmin{
+.bilderAdmin {
     width: 150px;
     height: 150px;
     margin: 5px;
     cursor: pointer;
 }
 
-.bilderAdmin:focus{
+.bilderAdmin:focus {
     border: 1px solid red;
+}
+
+#signInStart {
+    position: absolute;
+    top: 92%;
+    right: 2%;
+    width: 75px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 #logo_startseite {
@@ -74,88 +84,90 @@ span{
     margin-top: -300px;
 }
 
-#abstandHeader{
+#abstandHeader {
     margin-top: 140px;
 }
 
 #hintergrund {
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(dateien/icon_rueckseite_02.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    /*     background-position: center;
     height: 500px;
     width: 400px;
-    margin: 0 auto;
+    margin: 0 auto;*/
 }
 
-#time-minutes, #time-seconds, #versuche {
-    color:white;
+#time-minutes,
+#time-seconds,
+#versuche {
+    color: white;
     border: 2px;
     border-color: white;
-    font-size: 20pt; 
-  
+    font-size: 20pt;
+
 }
 
 #time-seconds {
     margin-right: 20px;
 }
 
-#iconShowHighscore{
+#iconShowHighscore {
     margin: 20px;
-    float: left;  
+    float: left;
     margin-top: -110px;
     width: 40px;
     cursor: pointer;
 }
 
-#iconShowHighscoreText{
+#iconShowHighscoreText {
     margin: 10px;
-    float: left;  
+    float: left;
     margin-top: -60px;
     width: 40px;
     cursor: pointer;
     text-align: center;
 }
- 
 
-#admin{
+
+#admin {
     margin: 20px;
-    float: right; 
+    float: right;
     margin-top: -110px;
     width: 40px;
     cursor: pointer;
 }
 
-#adminText{
+#adminText {
     margin-right: 50px;
-    float: right; 
+    float: right;
     margin-top: -60px;
     width: 40px;
     cursor: pointer;
     text-align: center;
 
 }
-   
- 
 
-@media screen and (max-width: 600px){
+
+
+@media screen and (max-width: 600px) {
     #logo_startseite {
         height: 280px;
         width: auto;
     }
 
     h1 {
-        font-size:18pt;
+        font-size: 18pt;
     }
 
-    table{
+    table {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
-    p{
+
+    p {
         font-size: 12pt;
     }
 
@@ -173,13 +185,14 @@ span{
         border: none;
         text-align: center;
     }
-     #spielanzeigen{
+
+    #spielanzeigen {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-     }
+    }
 
-     table img{
+    table img {
         width: 70px;
         height: 70px;
         margin: 5px;

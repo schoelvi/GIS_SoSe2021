@@ -6,9 +6,9 @@ const Url = require("url");
 const Mongo = require("mongodb");
 var Endabgabe;
 (function (Endabgabe) {
-    let dataUser;
-    let dataGames;
-    let mongoLink = "mongodb+srv://vivien_1:<password>@cluster0.4ukgufj.mongodb.net/?retryWrites=true&w=majority";
+    let dataAntwort;
+    let dataBild;
+    let mongoLink = "mongodb+srv://vivien_1:vivien5@gissose2021.rg9pn.mongodb.net/Endabgabe_Memory?retryWrites=true&w=majority";
     console.log("Starting server");
     let port = Number(process.env.PORT);
     if (!port)
@@ -25,9 +25,9 @@ var Endabgabe;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(mongoLink, options);
         await mongoClient.connect();
-        dataUser = mongoClient.db("textAdventure").collection("user");
-        dataGames = mongoClient.db("textAdventure").collection("games");
-        console.log("Verbindung hergestellt.", dataUser != undefined);
+        dataAntwort = mongoClient.db("textAdventure").collection("user");
+        dataBild = mongoClient.db("textAdventure").collection("games");
+        console.log("Verbindung hergestellt.", dataAntwort != undefined);
     }
     function handleListen() {
         console.log("Listening");
@@ -42,54 +42,48 @@ var Endabgabe;
             console.log(pfad);
             if (pfad == "/datenSenden") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
-                await dataUser.insertOne(url.query);
+                await dataAntwort.insertOne(url.query);
                 _response.write("Daten gespeichert");
                 console.log("hallo");
             }
             if (pfad == "/urlSenden") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
-                await dataGames.insertOne(url.query);
+                await dataBild.insertOne(url.query);
                 _response.write("Daten gespeichert, Seite bitte neu laden");
                 console.log("hallo");
             }
             if (pfad == "/highscoreReceive") {
                 _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData = await dataUser.find().sort({ Zeit: 1 }).toArray();
+                let allData = await dataAntwort.find().sort({ Zeit: 1 }).toArray();
                 let allDataString = JSON.stringify(allData);
                 _response.write(allDataString);
             }
             if (pfad == "/highscoreReceive") {
                 _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData = await dataUser.find().sort({ Zeit: 1 }).toArray();
+                let allData = await dataAntwort.find().sort({ Zeit: 1 }).toArray();
                 let allDataString = JSON.stringify(allData);
                 _response.write(allDataString);
             }
             if (pfad == "/datenReceive") {
                 _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData = await dataUser.find().toArray();
+                let allData = await dataAntwort.find().toArray();
                 let allDataString = JSON.stringify(allData);
                 _response.write(allDataString);
             }
             if (pfad == "/bildReceive") {
                 _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData = await dataGames.find().toArray();
+                let allData = await dataBild.find().toArray();
                 let allDataString = JSON.stringify(allData);
                 _response.write(allDataString);
             }
             if (pfad == "/bildLoeschen") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
                 console.log(url.query.name);
-                await dataGames.findOneAndDelete({ "_id": new Mongo.ObjectId(url.query.name) });
+                await dataBild.findOneAndDelete({ "_id": new Mongo.ObjectId(url.query.name) });
                 _response.write("Bild gelöscht, bitte Seite neu laden.");
-            }
-            if (pfad == "/compareUserdata") {
-                _response.setHeader("content-type", "text/html; charset=utf-8");
-                console.log(url.query.name);
-                await dataUser.findOne({ "user": new Mongo.ObjectId(url.query.name) });
-                _response.write("User nicht gefunden.");
             }
         }
         _response.end();
     }
 })(Endabgabe = exports.Endabgabe || (exports.Endabgabe = {}));
-//# sourceMappingURL=server.js.map
+//# sourceMappingURL=server%20copy.js.map

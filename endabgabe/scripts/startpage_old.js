@@ -21,4 +21,4 @@ var Endabgabe;
         console.log("open Einstellungen");
     }
 })(Endabgabe || (Endabgabe = {}));
-//# sourceMappingURL=startseite.js.map
+//# sourceMappingURL=startpage_old.js.map

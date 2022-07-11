@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/login.js" defer></script>
+    <script src="scripts/registration.js" defer></script>
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,14 +15,14 @@
 
         <form onsubmit="return false">
             <input id="sperren1" name="userName" type="text" placeholder="Benutzername"><br>
-            <input id="sperren3" name="password" type="text" placeholder="Passwort"><br>
-            <button type="button" id="signIn">Anmelden</button><br>
-            <span id="hinweis"></span><br>
-            <button type="button" id="newUser">Als neuen User registrieren.</button>
+            <input id="sperren2" name="password" type="text" placeholder="Passwort"><br>
+            <input id="sperren3" name="passwordRepeat" type="text" placeholder="Passwort wiederholen"><br>
+            <button type="button" id="register">registrieren</button><br>
+            <span id="hinweis"></span>
 
         </form>
     </div>
-    <div id="antwort"></div>
+    <div id="antwort">    </div>
 </body>
 
 </html>

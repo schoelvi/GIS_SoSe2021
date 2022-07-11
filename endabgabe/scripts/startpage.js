@@ -3,6 +3,8 @@ var Endabgabe;
 (function (Endabgabe) {
     let newGameButton = document.getElementById("newGame");
     newGameButton.addEventListener("click", openGame);
+    let signinButton = document.getElementById("signInStart");
+    signinButton.addEventListener("click", openLogin);
     let url;
     let rankingDiv = document.getElementById("ranking");
     receive();
@@ -10,6 +12,10 @@ var Endabgabe;
     function openGame() {
         window.open("game.html", "_self");
         console.log("open Game");
+    }
+    function openLogin() {
+        window.open("login.html", "_self");
+        console.log("open Login");
     }
     // Laden der gespeichtern Daten
     async function receive() {
@@ -29,4 +35,4 @@ var Endabgabe;
         }
     }
 })(Endabgabe || (Endabgabe = {}));
-//# sourceMappingURL=highscore.js.map
+//# sourceMappingURL=startpage.js.map
