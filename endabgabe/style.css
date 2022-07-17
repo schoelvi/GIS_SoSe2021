@@ -47,7 +47,6 @@ table img {
 }
 
 span {
-    color: red;
     justify-content: center;
 }
 
@@ -149,12 +148,27 @@ span {
 
 }
 
+#endGame {
+    position: absolute;
+    bottom: 5%;
+    right: 35%;
+    cursor: pointer;
+}
+
+#userpage {
+    position: absolute;
+    bottom: 5%;
+    right: 35%;
+    cursor: pointer;
+
+}
+
 
 
 @media screen and (max-width: 600px) {
     #logo_startseite {
         height: 280px;
-        width: auto;
+       
     }
 
     h1 {
@@ -172,7 +186,6 @@ span {
     }
 
     input {
-        width: auto;
         height: 30px;
     }
 

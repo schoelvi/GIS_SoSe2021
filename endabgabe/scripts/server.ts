@@ -15,6 +15,7 @@ export namespace Endabgabe {
     if (!port)
         port = 8100;
 
+    console.log("start server on port: "+ port);
     startServer(port);
     connectToMongo(mongoLink);
 
@@ -64,17 +65,23 @@ export namespace Endabgabe {
                 console.log("hallo");
             }
 
-            if (pfad == "/highscoreReceive") {
-                _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData: string[] = await dataUser.find().sort({ Zeit: 1}).toArray();
-                let allDataString: string = JSON.stringify(allData);
-                _response.write(allDataString);
+            if (pfad == "/statisticGamePlayed") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                await dataGames.updateOne({name: url.query.name}, {"$inc": {"playedCounter": 1}});
+                console.log("hallo");
             }
-            if (pfad == "/highscoreReceive") {
-                _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData: string[] = await dataUser.find().sort({ Zeit: 1}).toArray();
-                let allDataString: string = JSON.stringify(allData);
-                _response.write(allDataString);
+
+            if (pfad == "/statisticGameMoved") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                await dataGames.updateOne({name: url.query.name}, {"$inc": {"moveCounter": 1}});
+                console.log("hallo");
+            }
+
+            if (pfad == "/gamedataSend") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                await dataGames.insertOne(JSON.parse(<string>url.query.game));
+                _response.write("Daten gespeichert.");
+                console.log("hallo");
             }
  
             if (pfad == "/datenReceive") {
@@ -84,26 +91,60 @@ export namespace Endabgabe {
                 _response.write(allDataString);
             }
 
-            if (pfad == "/bildReceive") {
-                _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData: string[] = await dataGames.find().toArray();
-                let allDataString: string = JSON.stringify(allData);
-                _response.write(allDataString);
-            }
-
-            if (pfad == "/bildLoeschen") {
-                _response.setHeader("content-type", "text/html; charset=utf-8");
-                console.log(url.query.name);
-                await dataGames.findOneAndDelete({ "_id": new Mongo.ObjectId(<string>url.query.name) });
-                _response.write("Bild gelöscht, bitte Seite neu laden.");
-            }
- 
             if (pfad == "/compareUserdata") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
                 console.log(url.query.name);
-                await dataUser.findOne({ "user": new Mongo.ObjectId(<string>url.query.name) });
-                _response.write("User nicht gefunden.");
+                let foundUser = await dataUser.find({ "userName": <string>url.query.name });
+                console.log(await foundUser.count());
+                if(await foundUser.count() > 0){
+                    _response.write("Username existiert bereits.");
+                } else{
+                    _response.write("Username verfügbar.");
+                }
             }
+            
+            if (pfad == "/login") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                console.log(<string>url.query.userName);
+                console.log(<string>url.query.password);
+                let foundUser = await dataUser.find({ "userName": <string>url.query.userName, "password": <string>url.query.password});
+                console.log(await foundUser.count());
+                if(await foundUser.count() > 0){
+                    _response.write("Login erfolgreich.");
+                } else{
+                    _response.write("Benutzername und/oder Passwort ist falsch, bitte erneut versuchen oder sich registrieren.");
+                }
+            }
+
+            if (pfad == "/searchGame") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                let foundGame = await dataGames.find({ "name": <string>url.query.name});
+                console.log(await foundGame.count());
+                if(await foundGame.count() > 0){
+                    _response.write("Spiel gefunden.");
+                } else{
+                    _response.write("Derzeit existiert kein Spiel mit diesem Namen.");
+                }
+            }
+
+            if (pfad == "/gamedataReceive") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                let statistic = await dataGames.find().toArray();
+                    _response.write(JSON.stringify(statistic));
+            }
+
+            if (pfad == "/gamestatisticReceive") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                let foundGame = await dataGames.find().toArray();
+                    _response.write(JSON.stringify(foundGame));
+            }
+
+            if (pfad == "/selectedGameReceive") {
+                _response.setHeader("content-type", "text/html; charset=utf-8");
+                let foundGame = await dataGames.findOne({ "name": <string>url.query.name});
+                _response.write(JSON.stringify(foundGame));
+            }
+
         }
         _response.end();
 

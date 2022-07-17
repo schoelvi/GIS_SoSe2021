@@ -7,43 +7,46 @@ var Endabgabe;
     let hinweis = document.getElementById("hinweis");
     let sperren1 = document.getElementById("sperren1");
     let sperren2 = document.getElementById("sperren2");
-    let sperren3 = document.getElementById("sperren3");
     let registerButtons = document.getElementById("register");
     registerButtons.addEventListener("click", openSend);
-    let startButton = document.getElementById("startGame");
-    startButton.addEventListener("click", openStartpage);
-    let createButton = document.getElementById("createGame");
-    createButton.addEventListener("click", openCreatepage);
-    //Verlinkungen auf andere Seiten
-    /*function openRegistration(): void {
-        window.open("registration.html", "_self");
-        console.log("open Registratiom");
-    }*/
-    function openStartpage() {
-        setTimeout(function () {
-            window.open("startpage.html", "_self");
-            console.log("open Startgame");
-        }, 5000);
+    // Checking if the User exists 
+    async function checkExistence() {
+        url = "http://localhost:8100/";
+        let u = url + "compareUserdata" + "?" + "name=" + sperren1.value;
+        let response = await fetch(u);
+        let showAnswer = await response.text();
+        answer.innerText = showAnswer;
+        if (showAnswer == "Username existiert bereits.") {
+            return true;
+        }
+        return false;
     }
-    function openCreatepage() {
-        window.open("creategame.html", "_self");
-        console.log("open Creategame");
-    }
-    // Daten des Spielers zusammen mit den Daten (Zeit, Versuche) in die Datenbank abschicken
+    // Check if input is put in and send data to database
     async function openSend() {
-        if (sperren1.value == "" && sperren2.value == "" && sperren3.value == "") {
+        if (sperren1.value == "" && sperren2.value == "") {
             hinweis.innerHTML = "Alle Felder müssen ausgefüllt sein.";
         }
+        else if (sperren1.value == "") {
+            hinweis.innerHTML = "Alle Felder müssen ausgefüllt sein.";
+        }
+        else if (sperren2.value == "") {
+            hinweis.innerHTML = "Alle Felder müssen ausgefüllt sein.";
+        }
+        else if (!/^[A-Za-z0-9]*$/.test(sperren1.value)) {
+            hinweis.innerHTML = "Es dürfen nur alphanumerische Zeichen verwendet werden.";
+        }
+        else if (await checkExistence()) {
+        }
         else {
-            url = "https://gis2021vs.herokuapp.com/";
-            //url = "http://localhost:8100/";
+            //url = "https://gis2021vs.herokuapp.com/";
+            url = "http://localhost:8100/";
             let formData = new FormData(document.forms[0]);
             urlsearchParameters = new URLSearchParams(formData);
             url += "datenSenden" + "?" + urlsearchParameters.toString();
             let response = await fetch(url);
             let showAnswer = await response.text();
             answer.innerText = showAnswer;
-            openStartpage();
+            //openStartpage();
         }
     }
 })(Endabgabe || (Endabgabe = {}));
