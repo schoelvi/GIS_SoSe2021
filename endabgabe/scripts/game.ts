@@ -1,4 +1,4 @@
-export namespace Endabgabe {
+
     let url: string;
     let northButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("north");
     northButton.addEventListener("click", function () {
@@ -7,7 +7,7 @@ export namespace Endabgabe {
             displayPosition();
             statisticMoved();
         } else {
-            positionText.innerHTML = "Du befindest dich an Rand, du kannst nicht weiter nach Norden.";
+            positionText.innerHTML = "Du befindest dich am Rand, du kannst nicht weiter nach Norden.";
         }
     });
     let southButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("south");
@@ -18,7 +18,7 @@ export namespace Endabgabe {
             statisticMoved();
 
         } else {
-            positionText.innerHTML = "Du befindest dich an Rand, du kannst nicht weiter nach Süden.";
+            positionText.innerHTML = "Du befindest dich am Rand, du kannst nicht weiter nach Süden.";
         }
     });
     let eastButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("east");
@@ -29,7 +29,7 @@ export namespace Endabgabe {
             statisticMoved();
 
         } else {
-            positionText.innerHTML = "Du befindest dich an Rand, du kannst nicht weiter nach Osten.";
+            positionText.innerHTML = "Du befindest dich am Rand, du kannst nicht weiter nach Osten.";
         }
     });
     let westButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("west");
@@ -40,7 +40,7 @@ export namespace Endabgabe {
             statisticMoved();
 
         } else {
-            positionText.innerHTML = "Du befindest dich an Rand, du kannst nicht weiter nach Westen.";
+            positionText.innerHTML = "Du befindest dich am Rand, du kannst nicht weiter nach Westen.";
         }
     });
     let positionText: HTMLElement = <HTMLElement>document.getElementById("positionText");
@@ -64,7 +64,7 @@ export namespace Endabgabe {
     }
 
 
-    //Verlinkungen auf andere Seiten
+    //Link to other pages
     function openStartpage(): void {
         window.open("startpage.html", "_self");
         console.log("open Startpage");
@@ -85,7 +85,7 @@ export namespace Endabgabe {
     }
 
     function displayPosition() {
-        positionText.innerHTML = "Du befindest dich " + game.field[posY][posX];
+        positionText.innerHTML = "Du befindest dich am " + game.field[posY][posX];
     }
 
     function statisticPlayed() {
@@ -103,4 +103,4 @@ export namespace Endabgabe {
         url += "statisticGameMoved" + "?name=" + gameName;
         fetch(url);
     }
-}
+
