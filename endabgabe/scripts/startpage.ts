@@ -2,8 +2,6 @@ namespace Endabgabe {
 
     let searchText: HTMLInputElement = <HTMLInputElement>document.getElementById("searchText");
     let answer: HTMLParagraphElement = <HTMLParagraphElement>document.getElementById("antwort");
-    //let hinweis: HTMLElement = <HTMLElement>document.getElementById("hinweis");
-
     let newGameButton: HTMLElement = <HTMLElement>document.getElementById("newGame");
     newGameButton.addEventListener("click", openGame);
 
@@ -58,7 +56,6 @@ namespace Endabgabe {
     //Search function and receive data from database
     async function receive(): Promise<void> {
 
-        //url = "https://gis2021vs.herokuapp.com/";
         url = "http://localhost:8100/";
 
         console.log("Daten empfangen");
@@ -68,7 +65,6 @@ namespace Endabgabe {
         console.log(games);
         
         gameOverview.innerText = "";
-        //let zaehler2: number;
 
         for (let zaehler: number = 0; zaehler < Math.min(5,games.length); zaehler++) {
             let gameInfo = document.createElement("span");

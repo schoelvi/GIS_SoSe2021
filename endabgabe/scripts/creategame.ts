@@ -11,12 +11,6 @@ namespace Endabgabe {
     let sizeX: HTMLInputElement = <HTMLInputElement>document.getElementById("sizeX");
     let sizeY: HTMLInputElement = <HTMLInputElement>document.getElementById("sizeY");
 
-    //let registerButtons: HTMLElement = <HTMLElement>document.getElementById("register");
-    //registerButtons.addEventListener("click", openSend);
-
-    //let startButton: HTMLElement = <HTMLElement>document.getElementById("startGame");
-    //startButton.addEventListener("click", openStartpage);
-
     let generateGame: HTMLElement = <HTMLElement>document.getElementById("generateField");
     generateGame.addEventListener("click", generateField);
 
@@ -35,21 +29,15 @@ namespace Endabgabe {
         moveCounter: number;
     }
 
-
-
-    //Verlinkungen auf andere Seiten
-    /*function openRegistration(): void {
-        window.open("registration.html", "_self");
-        console.log("open Registratiom");
-    }*/
-
+    //Link to other pages
     function openStartpage(): void {
-        setTimeout(function(){
+        setTimeout(function () {
             window.open("startpage.html", "_self");
             console.log("open Startgame");
         }, 5000)
     }
 
+    //generate field dynamically
     function generateField(): void {
         generateGame.style.display = "none";
         let x = Number(sizeX.value);
@@ -75,34 +63,30 @@ namespace Endabgabe {
     }
 
 
-    // Daten des Spielers zusammen mit den Daten (Zeit, Versuche) in die Datenbank abschicken
+    // Send Data to database (also get creator from local storage)
     async function openSend(): Promise<void> {
-        /*if (sperren1.value == "" && sperren2.value == "" && sperren3.value == "") {
-            hinweis.innerHTML = "Alle Felder müssen ausgefüllt sein.";
-        } */
-        //else {
-            //url = "https://gis2021vs.herokuapp.com/";
-            url = "http://localhost:8100/";
+   
+        url = "http://localhost:8100/";
 
-            let game: gameType = {
-                name: gameName.value,
-                size: [Number(sizeX.value), Number(sizeY.value)],
-                startpoint: [Number(startX.value), Number(startY.value)],
-                field: field,
-                creator: userName, 
-                moveCounter: 0,
-                playedCounter: 0
-            }
+        let game: gameType = {
+            name: gameName.value,
+            size: [Number(sizeX.value), Number(sizeY.value)],
+            startpoint: [Number(startX.value), Number(startY.value)],
+            field: field,
+            creator: userName,
+            moveCounter: 0,
+            playedCounter: 0
+        }
 
-            urlsearchParameters = new URLSearchParams();
-            urlsearchParameters.append("game", JSON.stringify(game));
+        urlsearchParameters = new URLSearchParams();
+        urlsearchParameters.append("game", JSON.stringify(game));
 
-            url += "gamedataSend" + "?" + urlsearchParameters.toString();
-            let response: Response = await fetch(url);
-            let showAnswer: string = await response.text();
-            answer.innerText = showAnswer;
-            openStartpage();
-        //}
+        url += "gamedataSend" + "?" + urlsearchParameters.toString();
+        let response: Response = await fetch(url);
+        let showAnswer: string = await response.text();
+        answer.innerText = showAnswer;
+        openStartpage();
+    
     }
 
 

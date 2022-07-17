@@ -29,7 +29,6 @@ namespace Endabgabe {
         if (userName.value == "") {
             hinweis.innerHTML = "Beide Felder müssen ausgefüllt sein.";
         } else {
-            //url = "https://softwaredesign22.herokuapp.com/";
             url = "http://localhost:8100/";
 
             let formData: FormData = new FormData(document.forms[0]);

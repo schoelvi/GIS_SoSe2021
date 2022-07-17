@@ -47,12 +47,6 @@ var Endabgabe;
                 _response.write("Daten gespeichert");
                 console.log("hallo");
             }
-            if (pfad == "/urlSenden") {
-                _response.setHeader("content-type", "text/html; charset=utf-8");
-                await dataGames.insertOne(url.query);
-                _response.write("Daten gespeichert, Seite bitte neu laden");
-                console.log("hallo");
-            }
             if (pfad == "/statisticGamePlayed") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");
                 await dataGames.updateOne({ name: url.query.name }, { "$inc": { "playedCounter": 1 } });
@@ -68,12 +62,6 @@ var Endabgabe;
                 await dataGames.insertOne(JSON.parse(url.query.game));
                 _response.write("Daten gespeichert.");
                 console.log("hallo");
-            }
-            if (pfad == "/datenReceive") {
-                _response.setHeader("content-type", "JSON; charset=utf-8");
-                let allData = await dataUser.find().toArray();
-                let allDataString = JSON.stringify(allData);
-                _response.write(allDataString);
             }
             if (pfad == "/compareUserdata") {
                 _response.setHeader("content-type", "text/html; charset=utf-8");

@@ -25,7 +25,6 @@ var Endabgabe;
             hinweis.innerHTML = "Beide Felder müssen ausgefüllt sein.";
         }
         else {
-            //url = "https://softwaredesign22.herokuapp.com/";
             url = "http://localhost:8100/";
             let formData = new FormData(document.forms[0]);
             urlsearchParameters = new URLSearchParams(formData);

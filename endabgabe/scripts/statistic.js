@@ -11,7 +11,7 @@ var Endabgabe;
         window.open("userpage.html", "_self");
         console.log("open Userpage");
     }
-    //Search function and receive data from database
+    //Receive statistics from database
     async function receive() {
         //url = "https://gis2021vs.herokuapp.com/";
         url = "http://localhost:8100/";
@@ -21,7 +21,6 @@ var Endabgabe;
         let games = await response.json();
         console.log(games);
         statisticOverview.innerText = "";
-        //let zaehler2: number;
         for (let zaehler = 0; zaehler < games.length; zaehler++) {
             let gameInfo = document.createElement("span");
             gameInfo.innerHTML = games[zaehler].name + ", MoveCounter: " + games[zaehler].moveCounter + ", PlayedCounter: " + games[zaehler].playedCounter;

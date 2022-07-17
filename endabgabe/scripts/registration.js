@@ -21,6 +21,11 @@ var Endabgabe;
         }
         return false;
     }
+    //Link to other pages
+    function openUserpage() {
+        window.open("userpage.html", "_self");
+        console.log("open Userpage");
+    }
     // Check if input is put in and send data to database
     async function openSend() {
         if (sperren1.value == "" && sperren2.value == "") {
@@ -38,7 +43,6 @@ var Endabgabe;
         else if (await checkExistence()) {
         }
         else {
-            //url = "https://gis2021vs.herokuapp.com/";
             url = "http://localhost:8100/";
             let formData = new FormData(document.forms[0]);
             urlsearchParameters = new URLSearchParams(formData);
@@ -46,7 +50,7 @@ var Endabgabe;
             let response = await fetch(url);
             let showAnswer = await response.text();
             answer.innerText = showAnswer;
-            //openStartpage();
+            openUserpage();
         }
     }
 })(Endabgabe || (Endabgabe = {}));

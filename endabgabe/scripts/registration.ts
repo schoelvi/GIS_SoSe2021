@@ -23,6 +23,11 @@ namespace Endabgabe {
         return false;
     } 
 
+    //Link to other pages
+    function openUserpage(): void {
+        window.open("userpage.html", "_self");
+        console.log("open Userpage");
+    }
 
     // Check if input is put in and send data to database
     async function openSend(): Promise<void> {
@@ -41,7 +46,6 @@ namespace Endabgabe {
         else if (await checkExistence()) {
         }
         else {
-            //url = "https://gis2021vs.herokuapp.com/";
             url = "http://localhost:8100/";
 
             let formData: FormData = new FormData(document.forms[0]);
@@ -51,7 +55,7 @@ namespace Endabgabe {
             let response: Response = await fetch(url);
             let showAnswer: string = await response.text();
             answer.innerText = showAnswer;
-            //openStartpage();
+            openUserpage();
         }
 
     }

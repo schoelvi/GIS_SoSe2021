@@ -7,7 +7,7 @@ var Endabgabe;
     createButton.addEventListener("click", openCreatepage);
     let statisticButton = document.getElementById("statistic");
     statisticButton.addEventListener("click", openStatistic);
-    //Verlinkungen auf andere Seiten
+    //Link to other pages
     function openStartpage() {
         window.open("startpage.html", "_self");
         console.log("open Game");

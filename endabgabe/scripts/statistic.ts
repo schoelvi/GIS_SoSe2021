@@ -28,7 +28,7 @@ namespace Endabgabe {
 
   
 
-    //Search function and receive data from database
+    //Receive statistics from database
     async function receive(): Promise<void> {
 
         //url = "https://gis2021vs.herokuapp.com/";
@@ -41,7 +41,6 @@ namespace Endabgabe {
         console.log(games);
         
         statisticOverview.innerText = "";
-        //let zaehler2: number;
 
         for (let zaehler: number = 0; zaehler < games.length; zaehler++) {
             let gameInfo = document.createElement("span");

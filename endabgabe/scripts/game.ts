@@ -1,3 +1,4 @@
+namespace Endabgabe {
 
     let url: string;
     let northButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("north");
@@ -71,6 +72,7 @@
     }
 
     playGame();
+    //Play Game
     async function playGame() {
         url = "http://localhost:8100/";
 
@@ -83,11 +85,11 @@
         displayPosition();
         statisticPlayed();
     }
-
+    // Display Position
     function displayPosition() {
         positionText.innerHTML = "Du befindest dich am " + game.field[posY][posX];
     }
-
+    //Count +1 if the game was played
     function statisticPlayed() {
         url = "http://localhost:8100/";
 
@@ -96,6 +98,7 @@
         fetch(url);
     }
 
+    //Count +1 if the player moved in one of the four directions
     function statisticMoved() {
         url = "http://localhost:8100/";
 
@@ -103,4 +106,5 @@
         url += "statisticGameMoved" + "?name=" + gameName;
         fetch(url);
     }
+}
 
