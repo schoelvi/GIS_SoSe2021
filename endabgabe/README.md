@@ -34,7 +34,7 @@ As part of the course "SoftwareDesign" in the summer term 2022 at HS-Furtwangen 
 
 1. Clone the repository "Endabgabe".
 2. To start the server the following must be executed in the terminal: "npm start".
-3. I use the localhost for my code please start the project using the live server. I´m using the following VS-Code extension: [i use the following vs-code extension ](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+3. I use the localhost for my code please start the project using the live server. I´m using the following VS-Code extension: [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 4. Please open first the file "login.html".
 
 
